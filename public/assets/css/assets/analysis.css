@@ -1,0 +1,237 @@
+@font-face {
+    font-family: Flama-Bold;
+    font-style: normal;
+    font-display: swap;
+    src: url(/resources/fonts/livecenter/Flama-Bold2.woff) format("woff");
+}
+
+@font-face {
+    font-family: Flama-Book;
+    font-style: normal;
+    font-display: swap;
+    src: url(/resources/fonts/livecenter/Flama-Book2.woff) format("woff");
+}
+
+@font-face {
+    font-family: Sueca-Regular;
+    font-style: normal;
+    font-display: swap;
+    src: url(/resources/fonts/livecenter/Sueca-Regular.woff) format("woff");
+}
+
+.col-blue {
+    color: #1d427a;
+}
+
+.col-darkPurple {
+    color: #78004b;
+}
+
+.col-white {
+    color: #fff;
+}
+
+.col-black {
+    color: #000;
+}
+
+.col-darkerGray {
+    color: #323232;
+}
+
+.col-gray {
+    color: #6f6f6f;
+}
+
+.native-app + .top-bar + .container-fluid {
+    padding-top: 131px;
+}
+
+.category-link {
+    border-color: #1d427a;
+    color: #000;
+}
+
+.category-widget .category-link {
+    border-color: #000;
+}
+
+.category-link:hover {
+    color: #000;
+}
+
+.article-body .card-title {
+    border-bottom-color: #1d427a !important;
+}
+
+.article-body .media-download-link {
+    color: #1d427a;
+}
+
+blockquote:before {
+    color: #e1eef9;
+}
+
+.site-footer {
+    background-color: #1d427a;
+    color: #fff;
+}
+
+.so-me-icon svg {
+    color: #1d427a;
+    background-color: #fff;
+}
+
+.main-footer-container {
+    border-top: 2px solid #1d427a;
+}
+
+.main-nav {
+    background-color: #1d427a;
+}
+
+.main-nav,
+.main-nav a {
+    color: #fff;
+}
+
+.main-nav .regular-menu {
+    font-size: 1.5rem;
+}
+
+.main-nav .action-menu svg {
+    color: #fff;
+    fill: #fff;
+}
+
+.main-nav .action-menu-item-container-wrapper {
+    top: 56px;
+}
+
+.main-nav .action-menu-item-container-wrapper .menu-item {
+    background-color: #f3fafd;
+}
+
+.main-nav .action-menu-item-container-wrapper .menu-item a {
+    color: #323232;
+}
+
+.main-nav .action-menu-item-container-wrapper .menu-item.search button {
+    min-width: 45px;
+    color: #fff;
+    background-color: #1d427a;
+}
+
+.main-nav .action-menu-item-container-wrapper .menu-item.full-menu {
+    background-color: #365380;
+    font-size: 1.6rem;
+}
+
+.main-nav .action-menu-item-container-wrapper.fullBg {
+    color: #fff;
+    background-color: #365380;
+}
+
+.main-nav .action-menu-item-container-wrapper.fullBg a,
+.main-nav .sponsor-content-info svg {
+    color: #fff;
+}
+
+.teaser .kicker {
+    background-color: #1d427a;
+}
+
+.lc-live-portal .live-portal-container {
+    width: 100% !important;
+}
+
+.lc-live-portal .lc-feed-container {
+    max-width: 700px !important;
+}
+
+.cookie-info {
+    background-color: #1d427a;
+}
+
+.search-results .btn {
+    color: #1d427a;
+    border-color: #1d427a;
+}
+
+.norkon-ticker {
+    background-color: #f3fafd;
+    border-bottom: 1px solid #ccc;
+    line-height: 1.5rem;
+    margin: 0 -12px 12px;
+    padding: 0 12px;
+}
+
+.norkon-ticker .negative {
+    color: #b92123;
+}
+
+.norkon-ticker .positive {
+    color: #8ea731;
+}
+
+.section_highlight {
+    background-color: #f1f3f2;
+    border-top-color: #1d427a;
+    border-bottom-color: #1d427a;
+}
+
+.most-read-list ul li:nth-child(odd) {
+    background-color: #f9f2f6;
+}
+
+.most-read-list .list-header {
+    border-color: #78004b;
+    color: #78004b;
+}
+
+.login-page-form {
+    background-color: #f3fafd;
+}
+
+.promobox {
+    border-color: #1d427a;
+    background-color: #ffead2;
+}
+
+.icon-red-alert {
+    color: #cc2128;
+}
+
+.icon-blue-alert {
+    color: #1d427a;
+}
+
+.icon-green-alert {
+    color: #8ea731;
+}
+
+.alert-option-chooser .option,
+.alert-option-chooser .option-wrapper {
+    border-color: #1d427a;
+}
+
+.inline-promo-box .card-body {
+    border-left: 1.2rem solid #1d427a;
+    background-color: #f3fafd;
+}
+
+.lc-live-portal .lc-feed-container .ncpost-container:before {
+    left: -3px;
+}
+
+@media (min-width: 992px) {
+    .lc-live-portal .lc-feed-container .ncpost-container:before {
+        left: 6px;
+    }
+}
+
+.wrapper {
+    max-width: 1200px;
+    align-items: center;
+    margin: 0 auto;
+}
