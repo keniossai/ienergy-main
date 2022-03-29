@@ -160,7 +160,7 @@
                                         <li> <a href="{{ route('tag.index')}}">Tags</a> </li>
                                     </ul>
                                 </li>
-                            <li><a href="media"><i class="nav-icon ti ti-video"></i><span class="nav-title">Media</span><span class="nav-label label label-success">New</span></a> </li>
+                            <li><a href="media"><i class="fa fa-picture-o" aria-hidden="true"></i><span class="nav-title">Media</span><span class="nav-label label label-success">New</span></a> </li>
                             <li><a href="messages"><i class="nav-icon ti ti-email"></i><span class="nav-title">Messages</span><span class="nav-label label label-success">2</span></a> </li>
                             <li>
                                 <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="nav-icon ti ti-layout-column3-alt"></i><span class="nav-title">Pages</span> </a>
@@ -168,13 +168,20 @@
                                     <li> <a href="/">Home</a> </li>
                                 </ul>
                             </li>
-                            <li><a href="calendar"><i class="nav-icon ti ti-calendar"></i><span class="nav-title">Calendar</span></a></li>
+                            <li>
+                                <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-calendar-check    "></i><span class="nav-title">Events</span> </a>
+                                <ul aria-expanded="false">
+                                    <li> <a href="{{route('events.index')}}">All Events</a> </li>
+                                    <li> <a href="{{route('events.create')}}">Add New</a> </li>
+                                </ul>
+                            </li>
+                            <li><a href="calendar"><i class="fa fa-calendar" aria-hidden="true"></i><span class="nav-title">Calendar</span></a></li>
                             <li><a href="comments"><i class="nav-icon ti ti-comment"></i><span class="nav-title">Comments</span><span class="nav-label label label-danger">2</span></a> </li>
                             <li>
                                 <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class=" ti ti-settings pr-2 text-info"></i><span class="nav-title">Settings</span></a>
                                 <ul aria-expanded="false">
                                     <li> <a href="{{route('users.profile')}}"><i class="fa fa-user pr-2 text-success"></i>Your Profile</a> </li>
-                                    <li> <a href="{{route('users.index')}}">Users</a> </li>
+                                    <li> <a href="{{route('users.index')}}"> <i class="fa fa-user-plus" aria-hidden="true"></i> Users</a> </li>
                                 </ul>
                             </li>
                             <li>
@@ -220,6 +227,7 @@
 
 <!-- plugins -->
 <script src="{{asset('panel/js/vendors.js')}}"></script>
+<script src="https://kit.fontawesome.com/f921b1f4f8.js" crossorigin="anonymous"></script>
 
 <!-- custom app -->
 <script src="{{asset('panel/js/app.js')}}"></script>

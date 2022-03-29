@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Category;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
@@ -12,10 +13,7 @@ class FrontEndController extends Controller
         $posts = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(6)->get();
         $firstPosts = $posts->splice(0, 1);
         $lastPosts = $posts->splice(0, 2);
-        // $mostPosts = $posts->splice(3, 10);
-        // $popularPosts = $posts->splice(8, 6);
         $trendingPosts = $posts->splice(0, 3);
-        // $downPosts = $posts->splice(10, 4);
 
         $moreNews = Post::with('category', 'user')->orderBy('created_at', 'DESC')->take(14)->get();
         $moreView = $moreNews->splice(4, 10);
@@ -37,10 +35,13 @@ class FrontEndController extends Controller
     }
     public function newsdetails($slug){
         $post = Post::with('category', 'user')->where('slug', $slug)->first();
-        // $post = Tag::with('tag')->where('slug', $slug)->first();
+        $posts = Post::with('category', 'user')->inRandomOrder()->limit(5)->get();
+
+        $categories = Category::all();
+        $tags = Tag::all();
         
         if($post){
-            return view('pages.newsdetails', compact('post'));
+            return view('pages.newsdetails', compact(['post', 'posts', 'categories', 'tags']));
         }else{
             return redirect('/');
         }
@@ -80,5 +81,25 @@ class FrontEndController extends Controller
     public function nigeria(){
 
         return view('pages.nigeria');
+    }
+    public function gas(){
+
+        return view('pages.gas');
+    }
+    public function ep(){
+
+        return view('pages.ep');
+    }
+    public function opinion(){
+
+        return view('pages.opinion');
+    }
+    public function insights(){
+
+        return view('pages.insights');
+    }
+    public function people(){
+
+        return view('pages.people');
     }
 }

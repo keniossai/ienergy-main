@@ -191,42 +191,17 @@
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="recent" role="tabpanel">
-                                        <div class="rec-item d-flex">
-                                            <div class="rec-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-6.jpg" alt=""></a>
+                                        @foreach ($posts as $post)
+                                            <div class="rec-item d-flex">
+                                                <div class="rec-img">
+                                                    <a href=""><img style="width: 80px;" src="{{$post->image}}" alt=""></a>
+                                                </div>
+                                                <div class="img-content">
+                                                    <h6><a href="">{{$post->title}}</a></h6>
+                                                    <span>20 Seconds ago</span>
+                                                </div>
                                             </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <span>20 Seconds ago</span>
-                                            </div>
-                                        </div>
-                                        <div class="rec-item d-flex">
-                                            <div class="rec-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-11.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <span>4 minutes ago</span>
-                                            </div>
-                                        </div>
-                                        <div class="rec-item d-flex">
-                                            <div class="rec-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-7.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <span>47 minutes ago</span>
-                                            </div>
-                                        </div>
-                                        <div class="rec-item d-flex">
-                                            <div class="rec-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-4.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <span>1 Hours ago</span>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                     <div class="tab-pane fade" id="popular" role="tabpanel">
                                         <div class="pop-item d-flex">

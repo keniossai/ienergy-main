@@ -219,11 +219,11 @@
                             <li class="list-inline-item"><a href="exclusive-news">Exclusive</a></li>
                             <li class="list-inline-item"><a href="exclusive-news">Analysis</a></li>
                             <li class="list-inline-item mega-vd"><a href="regions">Regions</a></li>
-                            <li class="list-inline-item"><a href="">E&P</a></li>
-                            <li class="list-inline-item"><a href="">Gas</a></li>
+                            <li class="list-inline-item"><a href="energy-p">E&P</a></li>
+                            <li class="list-inline-item"><a href="rigs-vessel">Gas</a></li>
                             <li class="list-inline-item"><a href="energy-transition">Energy Transition</a></li>
                             <li class="list-inline-item"><a href="energy-finance">Energy Finance</a></li>
-                            <li class="list-inline-item"><a href="">Opinion</a></li>
+                            <li class="list-inline-item"><a href="opinion">Opinion</a></li>
                             <li class="list-inline-item mega-mnu"><a>More <i class="fa fa-angle-down"></i></a>
                                 <ul class="mega-menu">
                                     <li class="row">
@@ -237,8 +237,8 @@
                                                         <li><a href="">Latest News</a></li>
                                                         <li><a href="">Exclusive</a></li>
                                                         <li><a href="">Regions</a></li>
-                                                        <li><a href="">Energy & Politics</a></li>
-                                                        <li><a href="">Gas</a></li>
+                                                        <li><a href="energy-p">E & P</a></li>
+                                                        <li><a href="rigs-vessel">Gas</a></li>
                                                         <li><a href="">Energy Transition</a></li>
                                                         <li><a href="">Energy Finance</a></li>
                                                         <li><a href="">Opinion</a></li>
@@ -305,7 +305,7 @@
                                                 <div class="cat-content">
                                                     <ul class="list-unstyled">
                                                         <li><a href="about.html">About Us</a></li>
-                                                        <li><a href="contact-us.html">Contact Us</a></li>
+                                                        <li><a href="contact-us">Contact Us</a></li>
                                                         <li><a href="">Subscribe</a></li>
                                                         <li><a href="frequent-ask-question">Faq</a></li>
                                                         <li><a href="">Advertise</a></li>

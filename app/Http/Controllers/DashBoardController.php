@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Post;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class DashBoardController extends Controller
@@ -15,7 +16,8 @@ class DashBoardController extends Controller
     }
     public function calendar(){
 
-        return view('admin.calender.index');
+        $events = Event::orderBy('created_at', 'DESC')->paginate(4);
+        return view('admin.calender.index', compact('events'));
     }
     public function lock(){
 

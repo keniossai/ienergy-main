@@ -13,7 +13,7 @@
             <div class="col-md-12 mt-5">
                 <div class="more-news">
                     <div class="sec-title">
-                        <h5>Energy Transition</h5>
+                        <h5>Latest News</h5>
                     </div>
                     <div class="more-slider owl-carousel">
                         <div class="more-item">

@@ -36,12 +36,10 @@
                                     <p class="mt-3">
                                         Drag and drop your event or click in the calendar.
                                     </p>
-                                    <div class="fc-event fc-event-primary" data-color="fc-event-primary"><span></span> Family
-                                        Vacation</div>
-                                    <div class="fc-event fc-event-warning" data-color="fc-event-warning"><span></span> Meeting In
-                                        Office</div>
-                                    <div class="fc-event fc-event-danger" data-color="fc-event-danger"><span></span> Client Call</div>
-                                    <div class="fc-event fc-event-success" data-color="fc-event-success"><span></span> Interview</div>
+                                    @foreach ($events as $event)
+                                    <div class="fc-event fc-event-primary" data-color="fc-event-primary"><span></span>{{$event->title}}</div>
+                                    @endforeach
+                                    
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                         <label class="form-check-label" for="defaultCheck1">
