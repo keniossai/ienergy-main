@@ -11,7 +11,7 @@
                 <!-- begin page title -->
                 <div class="d-block d-sm-flex flex-nowrap align-items-center">
                     <div class="page-title mb-2 mb-sm-0">
-                        <h1>Account Settings</h1>
+                        <h1>Site Settings</h1>
                     </div>
                     <div class="ml-auto d-flex align-items-center">
                         <nav>
@@ -22,7 +22,7 @@
                                 <li class="breadcrumb-item">
                                     Dashboard
                                 </li>
-                                <li class="breadcrumb-item active text-primary" aria-current="page">Account Settings</li>
+                                <li class="breadcrumb-item active text-primary" aria-current="page">Site Settings</li>
                             </ol>
                         </nav>
                     </div>
@@ -79,7 +79,7 @@
 
                                     <div class="profile-btn text-center">
                                         <div><button class="btn btn-light text-primary mb-2">Upload New Avatar</button></div>
-                                        <div><button class="btn btn-danger">Delete</button></div>
+                                        <div><a href="{{route('settings.edit')}}" class="btn btn-danger">Edit Site</a></div>
                                     </div>
                                 </div>
                             </div>
