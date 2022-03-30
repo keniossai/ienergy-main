@@ -53,8 +53,8 @@ class FrontEndController extends Controller
         $category = Category::where('slug', $slug)->first();
         $posts = Post::where('category_id', $category->id)->paginate(50);
 
-        $leftSidePost = $posts->splice(0, 20);
-        $rightSidePost = $posts->splice(0, 20);
+        $leftSidePost = $posts->splice(0, 10);
+        $rightSidePost = $posts->splice(0, 10);
         
         return view('pages.latestnews', compact(['category',  'leftSidePost', 'rightSidePost' ]));
     }
