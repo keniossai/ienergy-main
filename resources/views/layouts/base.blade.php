@@ -454,11 +454,11 @@
                 <div class="f-about">
                     <img src="{{asset('assets')}}/img/f-logo.png" alt="">
                     <ul class="list-unstyled list-inline f-social">
-                        <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href=""><i class="fa fa-linkedin"></i></a></li>
-                        <li class="list-inline-item"><a href=""><i class="fa fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href=""><i class="fa fa-reddit"></i></a></li>
+                        <li class="list-inline-item"><a href="{{$setting->facebook}}"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="{{$setting->twitter}}"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="{{$setting->linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="{{$setting->instagram}}"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="{{$setting->reddit}}"><i class="fa fa-reddit"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -506,7 +506,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="copyright-text">
-                    <p>Copyright &copy; 2022 | Designed by <a href="" target="_blank">Ken Ossai</a></p>
+                    <p>{{$setting->copyright}}</a></p>
                 </div>
             </div>
             <div class="col-md-6">
