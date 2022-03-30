@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Session;
 use App\Models\Category;
+use App\Models\Contact;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
@@ -67,48 +69,23 @@ class FrontEndController extends Controller
 
         return view('pages.contact');
     }
-    public function exclusive(){
 
-        return view('pages.exclusive');
-    }
-    public function africa(){
+    public function send_message(Request $request){
 
-        return view('pages.africa');
-    }
-    public function development(){
+        $this->validate($request, [
+            'name' => 'required|max:200',
+            'email' => 'required|email|max:200',
+            'subject' => 'required|max:255',
+            'message' => 'required|max:200',
 
-        return view('pages.development');
-    }
-    public function faq(){
+        ]);
 
-        return view('pages.faq');
-    }
-    public function energyfinance(){
+        $contact = Contact::create($request->all());
 
-        return view('pages.energyfinance');
+        Session::flash('message-send', 'Message sent successfully');
+        return redirect()->back();
     }
-    public function nigeria(){
 
-        return view('pages.nigeria');
-    }
-    public function gas(){
-
-        return view('pages.gas');
-    }
-    public function ep(){
-
-        return view('pages.ep');
-    }
-    public function opinion(){
-
-        return view('pages.opinion');
-    }
-    public function insights(){
-
-        return view('pages.insights');
-    }
-    public function people(){
-
-        return view('pages.people');
-    }
+    
+    
 }

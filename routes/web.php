@@ -55,6 +55,7 @@ Route::get('/energy-finance', [FrontEndController::class, 'energyfinance'])->nam
 
 Route::get('/site/about-us', [FrontEndController::class, 'about'])->name('about');
 Route::get('/site/contact-us', [FrontEndController::class, 'contact'])->name('contact');
+Route::post('/site/contact-us', [FrontEndController::class, 'send_message'])->name('pages.contact');
 
 
 Auth::routes();

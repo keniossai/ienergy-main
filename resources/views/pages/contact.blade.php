@@ -30,7 +30,12 @@
                         <h5>Get In Touch</h5>
                     </div>
                     <div class="contact-form">
-                        <form id="ajax-contact" method="post" action="send.php">
+                        <form id="ajax-contact" method="POST" action="{{route('pages.contact')}}">
+                            @csrf
+                            @include('includes.errors')
+                            @if (Session::has('message-send'))
+                                <div class="alert alert-success">{{Session::get('message-send')}}</div>
+                            @endif
                             <div class="row">
                                 <div class="col-md-6 ">
                                     <p><input type="text" id="name" name="name" placeholder="Name"></p>
@@ -39,10 +44,13 @@
                                     <p><input type="text" id="email" name="email" placeholder="Email"></p>
                                 </div>
                                 <div class="col-md-12">
+                                    <p><input type="text" id="subject" name="subject" placeholder="Subject"></p>
+                                </div>
+                                <div class="col-md-12">
                                     <p><textarea name="message" id="message" placeholder="Message"></textarea></p>
                                 </div>
                                 <div class="col-md-12">
-                                    <button type="submit">Submit Message</button>
+                                    <button type="submit">Send Message</button>
                                 </div>
                             </div>
                             <div id="form-messages"></div>
