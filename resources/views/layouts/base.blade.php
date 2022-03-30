@@ -215,15 +215,10 @@
                 <div class="col-lg-9">
                     <div class="main-menu">
                         <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item"><a href="latest-news">Latest News</a></li>
-                            <li class="list-inline-item"><a href="exclusive-news">Exclusive</a></li>
-                            <li class="list-inline-item"><a href="exclusive-news">Analysis</a></li>
-                            <li class="list-inline-item mega-vd"><a href="regions">Regions</a></li>
-                            <li class="list-inline-item"><a href="energy-p">E&P</a></li>
-                            <li class="list-inline-item"><a href="rigs-vessel">Gas</a></li>
-                            <li class="list-inline-item"><a href="energy-transition">Energy Transition</a></li>
-                            <li class="list-inline-item"><a href="energy-finance">Energy Finance</a></li>
-                            <li class="list-inline-item"><a href="opinion">Opinion</a></li>
+                            <li class="list-inline-item"><a href="{{route('pages.region')}}">Regions</a></li>
+                            @foreach ($categories as $category)
+                            <li class="list-inline-item"><a href="{{route('pages.latestnews', ['slug' => $category->slug])}}">{{$category->name}}</a></li>
+                            @endforeach
                             <li class="list-inline-item mega-mnu"><a>More <i class="fa fa-angle-down"></i></a>
                                 <ul class="mega-menu">
                                     <li class="row">
@@ -319,7 +314,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="clock text-right">
                         <span id="dg-clock"></span>
                     </div>

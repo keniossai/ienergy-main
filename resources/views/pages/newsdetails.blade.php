@@ -198,115 +198,24 @@
                                                 </div>
                                                 <div class="img-content">
                                                     <h6><a href="">{{$post->title}}</a></h6>
-                                                    <span>20 Seconds ago</span>
+                                                    <span><li class="list-inline-item">{{$post->created_at->format('m')}} Minutes ago</span>
                                                 </div>
                                             </div>
                                         @endforeach
                                     </div>
                                     <div class="tab-pane fade" id="popular" role="tabpanel">
+                                        @foreach ($popularNews as $post)
                                         <div class="pop-item d-flex">
                                             <div class="pop-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-3.jpg" alt=""></a>
+                                                <a href=""><img style="width: 100px;" src="{{$post->image}}" alt=""></a>
                                             </div>
                                             <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
+                                                <p><a href="">{{$post->title}}</a></p>
                                             </div>
                                         </div>
-                                        <div class="pop-item d-flex">
-                                            <div class="pop-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-8.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="pop-item d-flex">
-                                            <div class="pop-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-9.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="pop-item d-flex">
-                                            <div class="pop-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-12.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
-                                    <div class="tab-pane fade" id="comment" role="tabpanel">
-                                        <div class="com-item d-flex">
-                                            <div class="com-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/com-1.png" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href=""><span>James</span>: Nesciunt quaerat ipsam fugiat impedit dignissimos unde...</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="com-item d-flex">
-                                            <div class="com-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/com-2.png" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href=""><span>Mary</span>: Nesciunt quaerat ipsam fugiat impedit dignissimos unde...</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="com-item d-flex">
-                                            <div class="com-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/com-1.png" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href=""><span>John</span>: Nesciunt quaerat ipsam fugiat impedit dignissimos unde...</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="com-item d-flex">
-                                            <div class="com-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/com-2.png" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href=""><span>Anna</span>: Nesciunt quaerat ipsam fugiat impedit dignissimos unde...</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="com-item d-flex">
-                                            <div class="com-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/com-1.png" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href=""><span>Maxx</span>: Nesciunt quaerat ipsam fugiat impedit dignissimos unde...</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -314,144 +223,12 @@
                             <div class="add-widget">
                                 <img src="{{asset('assets')}}/img/add1.jpg" alt="" class="img-fluid">
                                 <div class="add-layer text-center">
-                                    <p>Best Template For Your Online News</p>
-                                    <a href="">Buy Now</a>
+                                    <p>Fill out this form to receive PDF</p>
+                                    <a href="">Subscribe Now</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="mv-widget">
-                                <div class="sec-title">
-                                    <h5>Most Viewed</h5>
-                                </div>
-                                <div class="mv-slider owl-carousel">
-                                    <div class="mv-item">
-                                        <div class="mv-box d-flex">
-                                            <div class="mv-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-3.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="mv-box d-flex">
-                                            <div class="mv-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-8.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="mv-box d-flex">
-                                            <div class="mv-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-9.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="mv-box d-flex">
-                                            <div class="mv-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-12.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mv-item">
-                                        <div class="mv-box d-flex">
-                                            <div class="mv-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-6.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="mv-box d-flex">
-                                            <div class="mv-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-11.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="mv-box d-flex">
-                                            <div class="mv-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-7.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="mv-box d-flex">
-                                            <div class="mv-img">
-                                                <a href=""><img src="{{asset('assets')}}/img/lt-sm-4.jpg" alt=""></a>
-                                            </div>
-                                            <div class="img-content">
-                                                <p><a href="">These sentences are selected from various online news.</a></p>
-                                                <ul class="list-unstyled list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="col-md-12 col-md-0">
                             <div class="app-widget">
                                 <img src="{{asset('assets')}}/img/news-app.jpg" alt="" class="img-fluid app-img">
@@ -473,46 +250,19 @@
                             <h5>Related News</h5>
                         </div>
                         <div class="relate-slider owl-carousel">
+                            @foreach ($relatedPosts as $post)
                             <div class="rel-item">
-                                <img src="{{asset('assets')}}/img/ls-1.jpg" alt="">
+                                <img style="width: 100%; height: 220px;" src="{{$post->image}}" alt="">
                                 <div class="rel-layer">
-                                    <p><a href="">It is usually composed of several sentences that together develop one.</a></p>
+                                    <h5 class="text-white"><a href="">{{$post->title}}</a></h5>
                                     <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">TECHNOLOGY</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
+                                        <li class="list-inline-item">{{$post->category->name}}</li>
+                                        <li class="list-inline-item">{{$post->created_at->format('M d, Y')}}</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="rel-item">
-                                <img src="{{asset('assets')}}/img/ls-2.jpg" alt="">
-                                <div class="rel-layer">
-                                    <p><a href="">It is usually composed of several sentences that together develop one.</a></p>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">TECHNOLOGY</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="rel-item">
-                                <img src="{{asset('assets')}}/img/lt-bg-3.jpg" alt="">
-                                <div class="rel-layer">
-                                    <p><a href="">It is usually composed of several sentences that together develop one.</a></p>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">TECHNOLOGY</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="rel-item">
-                                <img src="{{asset('assets')}}/img/int-1.jpg" alt="">
-                                <div class="rel-layer">
-                                    <p><a href="">It is usually composed of several sentences that together develop one.</a></p>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">TECHNOLOGY</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            @endforeach
+                            
                         </div>
                     </div>
                 </div>

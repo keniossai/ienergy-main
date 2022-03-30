@@ -15,17 +15,19 @@ class FrontEndController extends Controller
         $lastPosts = $posts->splice(0, 2);
         $trendingPosts = $posts->splice(0, 3);
 
-        $moreNews = Post::with('category', 'user')->orderBy('created_at', 'DESC')->take(14)->get();
-        $moreView = $moreNews->splice(4, 10);
+        $moreNews = Post::with('category', 'user')->orderBy('created_at', 'DESC')->take(9)->get();
+        $moreView = $moreNews->splice(4, 9);
 
         $popularNews = Post::with('category', 'user')->orderBy('created_at', 'DESC')->take(26)->get();
         $popularPosts = $popularNews->splice(14, 6);
         $secondPosts = $popularNews->splice(14, 6);
 
+        $tags = Tag::all();
+
         // return $lastPosts;
 
         $recentPosts = Post::with('category', 'user')->orderBy('created_at', 'DESC')->paginate(100);
-        return view('pages.homepage', compact(['posts', 'recentPosts', 'firstPosts', 'lastPosts', 'moreView', 'trendingPosts', 'popularPosts', 'secondPosts']));
+        return view('pages.homepage', compact(['posts', 'tags', 'recentPosts', 'firstPosts', 'lastPosts', 'moreView', 'trendingPosts', 'popularPosts', 'secondPosts']));
     }
 
 
@@ -33,22 +35,28 @@ class FrontEndController extends Controller
 
         return view('pages.about');
     }
+
     public function newsdetails($slug){
         $post = Post::with('category', 'user')->where('slug', $slug)->first();
         $posts = Post::with('category', 'user')->inRandomOrder()->limit(5)->get();
+        $relatedPost = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(16)->get();
+        $relatedPosts = $relatedPost->splice(4, 8);
+        $popularNews = $relatedPost->splice(4, 4);
 
         $categories = Category::all();
         $tags = Tag::all();
         
-        if($post){
-            return view('pages.newsdetails', compact(['post', 'posts', 'categories', 'tags']));
-        }else{
-            return redirect('/');
-        }
+        return view('pages.newsdetails', compact(['post', 'posts', 'categories', 'tags', 'relatedPosts', 'popularNews']));
+        
     }
-    public function latestnews(){
+    public function category($slug){
+        $category = Category::where('slug', $slug)->first();
+        $posts = Post::where('category_id', $category->id)->paginate(50);
 
-        return view('pages.latestnews');
+        $leftSidePost = $posts->splice(0, 20);
+        $rightSidePost = $posts->splice(0, 20);
+        
+        return view('pages.latestnews', compact(['category',  'leftSidePost', 'rightSidePost' ]));
     }
     public function region(){
 

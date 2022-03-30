@@ -79,7 +79,7 @@
             <div class="col-lg-8 col-md-12">
                 <div class="more-news">
                     <div class="sec-title">
-                        <h5>More News</h5>
+                        {{-- There was a h5 title here --}}
                     </div>
                     <div class="more-slider owl-carousel">
                         <div class="more-item">
@@ -118,13 +118,6 @@
                                         </div>
                                         <div class="img-content">
                                             <h5><a href="newsdetails">These sentences are selected from various online news.</a></h5>
-                                            <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            </ul>
                                         </div>
                                     </div>
                                     <div class="mv-box d-flex">
@@ -133,13 +126,6 @@
                                         </div>
                                         <div class="img-content">
                                             <h5><a href="newsdetails">These sentences are selected from various online news.</a></h5>
-                                            <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            </ul>
                                         </div>
                                     </div>
                                     <div class="mv-box d-flex">
@@ -148,13 +134,6 @@
                                         </div>
                                         <div class="img-content">
                                             <h5><a href="newsdetails">These sentences are selected from various online news.</a></h5>
-                                            <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            </ul>
                                         </div>
                                     </div>
                                     <div class="mv-box d-flex">
@@ -163,13 +142,6 @@
                                         </div>
                                         <div class="img-content">
                                             <h5><a href="newsdetails">These sentences are selected from various online news.</a></h5>
-                                            <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -183,13 +155,6 @@
                                         </div>
                                         <div class="img-content">
                                             <h5><a href="newsdetails">These sentences are selected from various online news.</a></h5>
-                                            <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            </ul>
                                         </div>
                                     </div>
                                     <div class="mv-box d-flex">
@@ -198,13 +163,6 @@
                                         </div>
                                         <div class="img-content">
                                             <h5><a href="newsdetails">These sentences are selected from various online news.</a></h5>
-                                            <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            </ul>
                                         </div>
                                     </div>
                                     <div class="mv-box d-flex">
@@ -213,13 +171,6 @@
                                         </div>
                                         <div class="img-content">
                                             <h5><a href="newsdetails">These sentences are selected from various online news.</a></h5>
-                                            <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            </ul>
                                         </div>
                                     </div>
                                     <div class="mv-box d-flex">
@@ -228,13 +179,6 @@
                                         </div>
                                         <div class="img-content">
                                             <h5><a href="newsdetails">These sentences are selected from various online news.</a></h5>
-                                            <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -243,11 +187,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="add-widget">
-                            <img src="{{asset('assets')}}/img/add1.jpg" alt="" class="img-fluid">
-                            <div class="add-layer text-center">
-                                <p>Best Template For Your Online News</p>
-                                <a href="">Buy Now</a>
-                            </div>
+                            <a href=""><img src="https://tpc.googlesyndication.com/simgad/17499190641646852409" alt="" class="img-fluid"></a>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -256,17 +196,10 @@
                                 <h5>Tag List</h5>
                             </div>
                             <div class="tag-box">
-                                <a href="#">News</a>
-                                <a href="#">Article</a>
-                                <a href="#">World</a>
-                                <a href="#">Google</a>
-                                <a href="#">Health</a>
-                                <a href="#">Online</a>
-                                <a href="#">World</a>
-                                <a href="#">Food</a>
-                                <a href="#">National</a>
-                                <a href="#">Business</a>
-                                <a href="#">Sports</a>
+                                @foreach ($tags as $tag)
+                                <a href="#">{{$tag->name}}</a>
+                                @endforeach
+                                
                             </div>
                         </div>
                     </div>

@@ -13,142 +13,45 @@
             <div class="col-md-12 mt-5">
                 <div class="more-news">
                     <div class="sec-title">
-                        <h5>Latest News</h5>
+                        <h5>{{$category->name}}</h5>
                     </div>
                     <div class="more-slider owl-carousel">
                         <div class="more-item">
-                            <div class="more-content d-flex">
-                                <div class="more-img">
-                                    <a href="#"><img src="{{asset('assets')}}/img/more-1.jpg" alt=""></a>
+                            @foreach ($leftSidePost as $post)
+                                <div class="more-content d-flex">
+                                    <div class="more-img">
+                                        <a href="{{route('pages.newsdetails', ['slug' => $post->slug])}}"><img style="width: 200px;" src="{{$post->image}}" alt=""></a>
+                                    </div>
+                                    <div class="img-content">
+                                        <h3><a href="{{route('pages.newsdetails', ['slug' => $post->slug])}}">{{$post->title}}</a></h3>
+                                        <ul class="list-unstyled list-inline">
+                                            <li class="list-inline-item mt-2">{{$post->category->name}}</li>
+                                            <li class="list-inline-item">{{$post->created_at->format('M d, Y')}}</li>
+                                        </ul>
+                                        <p>{{ Str::limit($post->description, 140)}}</p>
+                                    </div>
                                 </div>
-                                <div class="img-content">
-                                    <h3><a href="">These sentences are selected from various online news.</a></h3>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">Life Style</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, quam voluptatibus ipsum. Exde tenetur, quasi, provident animi magni voluptas fugit Itaque labore quae ad........</p>
-                                </div>
-                            </div>
-                            <div class="more-content d-flex">
-                                <div class="more-img">
-                                    <a href="#"><img src="{{asset('assets')}}/img/more-2.jpg" alt=""></a>
-                                </div>
-                                <div class="img-content">
-                                    <h3><a href="">These sentences are selected from various online news.</a></h3>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">Sports</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, quam voluptatibus ipsum. Exde tenetur, quasi, provident animi magni voluptas fugit Itaque labore quae ad........</p>
-                                </div>
-                            </div>
-                            <div class="more-content d-flex">
-                                <div class="more-img">
-                                    <a href="#"><img src="{{asset('assets')}}/img/more-3.jpg" alt=""></a>
-                                </div>
-                                <div class="img-content">
-                                    <h3><a href="">These sentences are selected from various online news.</a></h3>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">Health</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, quam voluptatibus ipsum. Exde tenetur, quasi, provident animi magni voluptas fugit Itaque labore quae ad........</p>
-                                </div>
-                            </div>
-                            <div class="more-content d-flex">
-                                <div class="more-img">
-                                    <a href="#"><img src="{{asset('assets')}}/img/more-4.jpg" alt=""></a>
-                                </div>
-                                <div class="img-content">
-                                    <h3><a href="">These sentences are selected from various online news.</a></h3>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">Fashion</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, quam voluptatibus ipsum. Exde tenetur, quasi, provident animi magni voluptas fugit Itaque labore quae ad........</p>
-                                </div>
-                            </div>
-                            <div class="more-content d-flex">
-                                <div class="more-img">
-                                    <a href="#"><img src="{{asset('assets')}}/img/more-7.jpg" alt=""></a>
-                                </div>
-                                <div class="img-content">
-                                    <h3><a href="">These sentences are selected from various online news.</a></h3>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">Sports</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, quam voluptatibus ipsum. Exde tenetur, quasi, provident animi magni voluptas fugit Itaque labore quae ad........</p>
-                                </div>
-                            </div>
+                            @endforeach
+                           
                         </div>
                         <div class="more-item">
+                            @foreach ($rightSidePost as $post)
                             <div class="more-content d-flex">
                                 <div class="more-img">
-                                    <a href="#"><img src="{{asset('assets')}}/img/more-5.jpg" alt=""></a>
+                                    <a href="#"><img style="width: 200px;" src="{{$post->image}}" alt=""></a>
                                 </div>
                                 <div class="img-content">
-                                    <h3><a href="">These sentences are selected from various online news.</a></h3>
+                                    <h3><a href="">{{$post->title}}</a></h3>
                                     <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">Life Style</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
+                                        <li class="list-inline-item">{{$post->category->name}}</li>
+                                        <li class="list-inline-item">{{$post->created_at->format('M d, Y')}}</li>
                                     </ul>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, quam voluptatibus ipsum. Exde tenetur, quasi, provident animi magni voluptas fugit Itaque labore quae ad........</p>
                                 </div>
                             </div>
-                            <div class="more-content d-flex">
-                                <div class="more-img">
-                                    <a href="#"><img src="{{asset('assets')}}/img/more-6.jpg" alt=""></a>
-                                </div>
-                                <div class="img-content">
-                                    <h3><a href="">These sentences are selected from various online news.</a></h3>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">Health</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, quam voluptatibus ipsum. Exde tenetur, quasi, provident animi magni voluptas fugit Itaque labore quae ad........</p>
-                                </div>
-                            </div>
-                            <div class="more-content d-flex">
-                                <div class="more-img">
-                                    <a href="#"><img src="{{asset('assets')}}/img/more-7.jpg" alt=""></a>
-                                </div>
-                                <div class="img-content">
-                                    <h3><a href="">These sentences are selected from various online news.</a></h3>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">Sports</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, quam voluptatibus ipsum. Exde tenetur, quasi, provident animi magni voluptas fugit Itaque labore quae ad........</p>
-                                </div>
-                            </div>
-                            <div class="more-content d-flex">
-                                <div class="more-img">
-                                    <a href="#"><img src="{{asset('assets')}}/img/more-8.jpg" alt=""></a>
-                                </div>
-                                <div class="img-content">
-                                    <h3><a href="">These sentences are selected from various online news.</a></h3>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">Technology</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, quam voluptatibus ipsum. Exde tenetur, quasi, provident animi magni voluptas fugit Itaque labore quae ad........</p>
-                                </div>
-                            </div>
-                            <div class="more-content d-flex">
-                                <div class="more-img">
-                                    <a href="#"><img src="{{asset('assets')}}/img/more-3.jpg" alt=""></a>
-                                </div>
-                                <div class="img-content">
-                                    <h3><a href="">These sentences are selected from various online news.</a></h3>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">Health</li>
-                                        <li class="list-inline-item">February 11, 2019</li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, quam voluptatibus ipsum. Exde tenetur, quasi, provident animi magni voluptas fugit Itaque labore quae ad........</p>
-                                </div>
-                            </div>
+                            @endforeach
+                            
+                            
                         </div>
                     </div>
                 </div>

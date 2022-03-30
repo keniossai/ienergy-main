@@ -27,13 +27,13 @@ use App\Http\Controllers\EventDashboardController;
 Auth::routes();
 
 Route::get('/', [FrontEndController::class, 'homepage'])->name('homepage');
-Route::get('/newsdetails/{slug}', [FrontEndController::class, 'newsdetails'])->name('pages.newsdetails');
-Route::get('/latest-news', [FrontEndController::class, 'latestnews'])->name('latestnews');
+Route::get('newsdetails/{slug}', [FrontEndController::class, 'newsdetails'])->name('pages.newsdetails');
+Route::get('/{slug}', [FrontEndController::class, 'category'])->name('pages.latestnews');
 
 
 
 
-Route::get('/regions', [FrontEndController::class, 'region'])->name('region');
+Route::get('sector/regional', [FrontEndController::class, 'region'])->name('pages.region');
 
 // Region Location Routes
 Route::get('/nigeria', [FrontEndController::class, 'nigeria'])->name('nigeria');
