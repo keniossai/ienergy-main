@@ -493,8 +493,8 @@
                     <a href="">Archives</a>
                     <a href="">Terms & Condition</a>
                     <a href="">Privacy Policy</a>
-                    <a href="">Rss</a>
-                    <a href="">Apps</a>
+                    <a href="{{$setting->reddit}}">Rss</a>
+                    <a href="">Faq</a>
                     <a href="">Contact</a>
                 </div>
             </div>

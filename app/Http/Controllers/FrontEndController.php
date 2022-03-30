@@ -32,6 +32,7 @@ class FrontEndController extends Controller
 
 
     public function about(){
+        // $user = User::first();
 
         return view('pages.about');
     }
@@ -53,10 +54,10 @@ class FrontEndController extends Controller
         $category = Category::where('slug', $slug)->first();
         $posts = Post::where('category_id', $category->id)->paginate(50);
 
-        $leftSidePost = $posts->splice(0, 10);
-        $rightSidePost = $posts->splice(0, 10);
+        $leftSidePost = $posts->splice(0, 20);
+        $rightSidePost = $posts->splice(0, 20);
         
-        return view('pages.latestnews', compact(['category',  'leftSidePost', 'rightSidePost' ]));
+        return view('pages.latestnews', compact(['category', 'leftSidePost', 'rightSidePost' ]));
     }
     public function region(){
 

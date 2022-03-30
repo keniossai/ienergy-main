@@ -62,7 +62,7 @@
                                     <i class="fa fa-map-marker"></i>
                                 </div>
                                 <div class="contact-content">
-                                    <p>795 South Park Avenue, Long Island, Newyork, NY 94107.</p>
+                                    <p>{{$setting->address}}</p>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                                     <i class="fa fa-envelope"></i>
                                 </div>
                                 <div class="contact-content">
-                                    <p>enquery@domain.com <br>help@yourdomain.com</p>
+                                    <p>{{$setting->email}}</p>
                                 </div>
                             </div>
                         </div>
@@ -82,19 +82,18 @@
                                     <i class="fa fa-phone"></i>
                                 </div>
                                 <div class="contact-content">
-                                    <p>+1 908 875 7678 <br>+1 908 875 7637</p>
+                                    <p>{{$setting->phone}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="social">
                                 <ul class="list-unstyled list-inline">
-                                    <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
-                                    <li class="list-inline-item"><a href=""><i class="fa fa-linkedin"></i></a></li>
-                                    <li class="list-inline-item"><a href=""><i class="fa fa-google-plus"></i></a></li>
-                                    <li class="list-inline-item"><a href=""><i class="fa fa-rss"></i></a></li>
-                                    <li class="list-inline-item"><a href=""><i class="fa fa-youtube"></i></a></li>
+                                    <li class="list-inline-item"><a href="{{$setting->facebook}}"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="list-inline-item"><a href="{{$setting->twitter}}"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a href="{{$setting->linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                                    <li class="list-inline-item"><a href="{{$setting->reddit}}"><i class="fa fa-rss"></i></a></li>
+                                    <li class="list-inline-item"><a href="{{$setting->instagram}}"><i class="fa fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>

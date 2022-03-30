@@ -42,6 +42,9 @@ class SettingsController extends Controller
         $setting->instagram = $request->instagram;
         $setting->twitter = $request->twitter;
         $setting->reddit = $request->reddit;
+        $setting->linkedin = $request->linkedin;
+        $setting->address = $request->address;
+        $setting->phone = $request->phone;
         $setting->email = $request->email;
         $setting->copyright = $request->copyright;
         $setting->description = $request->description;

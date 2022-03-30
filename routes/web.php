@@ -24,7 +24,7 @@ use App\Http\Controllers\EventDashboardController;
 |
 */
 
-Auth::routes();
+
 
 Route::get('/', [FrontEndController::class, 'homepage'])->name('homepage');
 Route::get('newsdetails/{slug}', [FrontEndController::class, 'newsdetails'])->name('pages.newsdetails');
@@ -53,11 +53,11 @@ Route::get('/energy-finance', [FrontEndController::class, 'energyfinance'])->nam
 
 
 
-Route::get('/about', [FrontEndController::class, 'about'])->name('about');
-Route::get('/contact-us', [FrontEndController::class, 'contact'])->name('contact');
+Route::get('/site/about-us', [FrontEndController::class, 'about'])->name('about');
+Route::get('/site/contact-us', [FrontEndController::class, 'contact'])->name('contact');
 
 
-
+Auth::routes();
 Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'verified']], function()
 {
     Route::get('/dashboard', [DashBoardController::class , 'index'])->name('dashboard');

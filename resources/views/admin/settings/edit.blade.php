@@ -38,7 +38,7 @@
                 <div class="card card-statistics">
                     <div class="card-body p-0">
                         <div class="row no-gutters">
-                            <div class="col-xl-3 pb-xl-0 pb-5 border-right">
+                            <div class="col-xl-4 pb-xl-0 pb-5 border-right">
                                 <div class="page-account-profil pt-5">
                                     <div class="profile-img text-center rounded-circle">
                                         <div class="pt-5">
@@ -47,17 +47,17 @@
                                             </div>
                                             <div class="profile pt-4">
                                                 <h4 class="mb-1">{{$setting->name}}</h4>
-                                                <p>{{$setting->description}}</p>
+                                                <p class="p-4">{{$setting->description}}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         
-                            <div class="col-md-9 border-t border-right">
+                            <div class="col-md-8 border-t border-right">
                                 <div class="page-account-form">
                                     <div class="form-titel border-bottom p-3">
-                                        <h5 class="mb-0 py-2">Edit Your Personal Profile</h5>
+                                        <h5 class="mb-0 py-2">Edit Your Site Settings</h5>
                                     </div>
                                     <form action="{{route('settings.update')}}" method="POST" enctype="multipart/form-data">
                                         @csrf
@@ -102,6 +102,18 @@
                                                     <div class="form-group">
                                                         <label for="email">Email</label>
                                                         <input type="text" class="form-control" id="email" name="email" value="{{$setting->email}}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="phone">Contact Phone Number:</label>
+                                                        <input type="text" class="form-control" id="phone" name="phone" value="{{$setting->phone}}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="address">Contact Address:</label>
+                                                        <input type="text" class="form-control" id="address" name="address" value="{{$setting->address}}">
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
