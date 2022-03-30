@@ -17,7 +17,7 @@ class CreateSettingsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('site_logo')->nullable();
-            $table->text('about_site')->nullable();
+            $table->text('description')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
             $table->string('linkedin')->nullable();
@@ -25,8 +25,6 @@ class CreateSettingsTable extends Migration
             $table->string('reddit')->nullable();
             $table->string('email')->nullable();
             $table->string('copyright')->nullable();
-
-
             $table->timestamps();
         });
     }

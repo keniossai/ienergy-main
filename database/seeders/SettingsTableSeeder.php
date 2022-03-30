@@ -13,6 +13,6 @@ class SettingsTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Setting::factory()->count(2)->create();
+        \App\Models\Setting::factory()->count(1)->create();
     }
 }

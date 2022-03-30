@@ -182,7 +182,7 @@
                                 <ul aria-expanded="false">
                                     <li> <a href="{{route('users.profile')}}"><i class="fa fa-user pr-2 text-success"></i>Your Profile</a> </li>
                                     <li> <a href="{{route('users.index')}}"> <i class="fa fa-user-plus" aria-hidden="true"></i> Users</a> </li>
-                                    <li> <a href="{{route('users.profile')}}"> <i class="fas fa-globe"></i> Site Settings</a> </li>
+                                    <li> <a href="{{route('settings.edit')}}"> <i class="fas fa-globe"></i> Site Settings</a> </li>
                                 </ul>
                             </li>
                             <li>

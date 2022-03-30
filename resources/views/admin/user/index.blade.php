@@ -67,7 +67,7 @@
                                         <td><img style="width: 50px; height: 50px; border-radius: 50px;" src="{{asset($user->image)}}" alt=""></td>
                                         <td>{{$user->name}}</td>
                                         <td>{{$user->email}}</td>
-                                        <td class="d-flex">
+                                        <td class="d-flex mt-2">
                                             <a href="{{ route('users.edit', [$user->id]) }}" class="btn btn-icon btn-outline-info btn-round"><i class="ti ti-pencil"></i></a>
                                             <form action="{{ route('users.destroy', [$user->id])}}" class="ml-2" method="POST">
                                                 @method('DELETE')

@@ -65,9 +65,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'verified']]
     Route::resource('category', CategoryController::class);
     Route::resource('post', PostController::class);
     Route::resource('tag', TagController::class);
-    Route::resource('settings', SettingsController::class);
     Route::resource('events', EventDashboardController::class);
-
+    
+    // Route::get('settings', SettingsController::class);
+    Route::get('/settings', [SettingsController::class, 'edit'])->name('settings.edit');
+    Route::post('/settings', [SettingsController::class, 'update'])->name('settings.update');
     // User Route
     Route::resource('users', UserController::class);
     Route::resource('lockscreen', LockScreenController::class);
