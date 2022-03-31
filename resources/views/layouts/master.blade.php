@@ -161,7 +161,7 @@
                                     </ul>
                                 </li>
                             <li><a href="media"><i class="fa fa-picture-o" aria-hidden="true"></i><span class="nav-title">Media</span><span class="nav-label label label-success">New</span></a> </li>
-                            <li><a href="messages"><i class="nav-icon ti ti-email"></i><span class="nav-title">Messages</span><span class="nav-label label label-success">2</span></a> </li>
+                            <li><a href="{{route('contact.index')}}"><i class="nav-icon ti ti-email"></i><span class="nav-title">Messages</span><span class="nav-label label label-success">2</span></a> </li>
                             <li>
                                 <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="nav-icon ti ti-layout-column3-alt"></i><span class="nav-title">Pages</span> </a>
                                 <ul aria-expanded="false">

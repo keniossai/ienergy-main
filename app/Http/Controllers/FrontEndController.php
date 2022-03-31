@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
 use Session;
+use App\Models\Post;
 use App\Models\Category;
 use App\Models\Contact;
 use App\Models\Tag;
@@ -54,12 +54,16 @@ class FrontEndController extends Controller
     }
     public function category($slug){
         $category = Category::where('slug', $slug)->first();
-        $posts = Post::where('category_id', $category->id)->paginate(50);
+        if($category){
+            $posts = Post::where('category_id', $category->id)->paginate(50);
+        }else{
+            return redirect()->route('homepage');
+        }
 
-        $leftSidePost = $posts->splice(0, 20);
-        $rightSidePost = $posts->splice(0, 20);
+        // $leftSidePost = $posts->splice(0, 20);
+        // $rightSidePost = $posts->splice(0, 20);
         
-        return view('pages.latestnews', compact(['category', 'leftSidePost', 'rightSidePost' ]));
+        return view('pages.latestnews', compact(['category', 'posts']));
     }
     public function region(){
 

@@ -14,7 +14,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $messages = Contact::latest()->get();
+        return view('admin.contact.index', compact('messages'));
     }
 
     /**
@@ -46,7 +47,14 @@ class ContactController extends Controller
      */
     public function show(Contact $contact)
     {
-        //
+        $message = Contact::find($id);
+
+        if($message){
+            return view('admin.contact.index', compact('message'));
+        }else{
+            Session::flash('message-error', 'No message found');
+            return redirect()->route('dashboard');
+        }
     }
 
     /**

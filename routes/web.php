@@ -7,7 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\SettingsController;
-use App\Http\Controllers\MessageController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LockScreenController;
@@ -24,7 +24,7 @@ use App\Http\Controllers\EventDashboardController;
 |
 */
 
-
+Auth::routes();
 
 Route::get('/', [FrontEndController::class, 'homepage'])->name('homepage');
 Route::get('newsdetails/{slug}', [FrontEndController::class, 'newsdetails'])->name('pages.newsdetails');
@@ -58,7 +58,7 @@ Route::get('/site/contact-us', [FrontEndController::class, 'contact'])->name('co
 Route::post('/site/contact-us', [FrontEndController::class, 'send_message'])->name('pages.contact');
 
 
-Auth::routes();
+
 Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'verified']], function()
 {
     Route::get('/dashboard', [DashBoardController::class , 'index'])->name('dashboard');
@@ -79,4 +79,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'verified']]
 
     Route::get('comment', [CommentsController::class, 'index'])->name('index');
     Route::get('calendar', [DashBoardController::class, 'calendar'])->name('index');
+    Route::get('/message', [ContactController::class, 'index'])->name('contact.index');
+    // Route::get('/message/{id}', [ContactController::class, 'show'])->name('contact.index');
 });

@@ -17,7 +17,7 @@
                     </div>
                     <div class="more-slider owl-carousel">
                         <div class="more-item">
-                            @foreach ($leftSidePost as $post)
+                            @foreach ($posts as $post)
                                 <div class="more-content d-flex">
                                     <div class="more-img">
                                         <a href="{{route('pages.newsdetails', ['slug' => $post->slug])}}"><img style="width: 200px;" src="{{$post->image}}" alt=""></a>
@@ -34,7 +34,7 @@
                             @endforeach
                            
                         </div>
-                        <div class="more-item">
+                        {{-- <div class="more-item">
                             @foreach ($rightSidePost as $post)
                             <div class="more-content d-flex">
                                 <div class="more-img">
@@ -52,7 +52,7 @@
                             @endforeach
                             
                             
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
