@@ -197,7 +197,7 @@
                             </div>
                             <div class="tag-box">
                                 @foreach ($tags as $tag)
-                                <a href="#">{{$tag->name}}</a>
+                                <a href="{{route('pages.tagnew', ['slug' => $tag->slug])}}">{{$tag->name}}</a>
                                 @endforeach
                                 
                             </div>

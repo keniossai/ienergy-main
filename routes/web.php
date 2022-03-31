@@ -28,7 +28,8 @@ Auth::routes();
 
 Route::get('/', [FrontEndController::class, 'homepage'])->name('homepage');
 Route::get('newsdetails/{slug}', [FrontEndController::class, 'newsdetails'])->name('pages.newsdetails');
-Route::get('/{slug}', [FrontEndController::class, 'category'])->name('pages.latestnews');
+Route::get('/category/{slug}', [FrontEndController::class, 'category'])->name('pages.categorynews');
+Route::get('/tag/{slug}', [FrontEndController::class, 'tag'])->name('pages.tagnew');
 
 
 
@@ -80,5 +81,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'verified']]
     Route::get('comment', [CommentsController::class, 'index'])->name('index');
     Route::get('calendar', [DashBoardController::class, 'calendar'])->name('index');
     Route::get('/message', [ContactController::class, 'index'])->name('contact.index');
-    // Route::get('/message/{id}', [ContactController::class, 'show'])->name('contact.index');
+    Route::delete('/message/delete/{id}', [ContactController::class, 'destroy'])->name('contact.destroy');
 });

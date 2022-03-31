@@ -93,8 +93,8 @@
                                         </div>
                                     </div>
                                     <div class="card-heading mt-5">
-                                        <h4 class="card-title">Summernote</h4>
-                                        <textarea  name="decripsion" id="decripsion" class="form-control" value="{{ $post->description }}" rows="20">{{ $post->description }}</textarea>
+                                        <h4 class="card-title">Description</h4>
+                                        <textarea  name="description" id="description" class="form-control" value="{{ $post->description }}" rows="20">{{ $post->description }}</textarea>
                                     </div>
                                     <button type="submit" class="btn bg-dark text-white btn-block mt-3">Update Post</button>
                                 </div>

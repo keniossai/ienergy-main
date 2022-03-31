@@ -242,6 +242,21 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="tag-widget">
+                                    <div class="sec-title">
+                                        <h5>Tag List</h5>
+                                    </div>
+                                    <div class="tag-box">
+                                        @foreach ($tags as $tag)
+                                        <a href="{{route('pages.tagnew', ['slug' => $tag->slug])}}">{{$tag->name}}</a>
+                                        @endforeach
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-12">

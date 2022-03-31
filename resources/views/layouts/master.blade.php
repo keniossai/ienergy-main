@@ -71,21 +71,15 @@
                                 </li>
                             </ul>
                             <ul class="navbar-nav nav-right ml-auto">
-                                
-                                <li class="nav-item">
-                                    <div class="search-wrapper">
-                                        <div class="close-btn">
-                                            <i class="ti ti-close"></i>
-                                        </div>
-                                        <div class="search-content">
-                                            <form>
-                                                <div class="form-group">
-                                                    <i class="ti ti-search magnifier"></i>
-                                                    <input type="text" class="form-control autocomplete" placeholder="Search Here" id="autocomplete-ajax" autofocus="autofocus">
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="{{route('contact.index')}}" >
+                                        <i class="ti ti-email"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="{{route('settings.edit')}}" >
+                                        <i class="fa fa-globe" aria-hidden="true"></i>
+                                    </a>
                                 </li>
                                 <li class="nav-item dropdown user-profile">
                                     <a href="javascript:void(0)" class="nav-link dropdown-toggle " id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

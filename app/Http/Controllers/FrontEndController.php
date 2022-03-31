@@ -26,15 +26,12 @@ class FrontEndController extends Controller
 
         $tags = Tag::all();
 
-        // return $lastPosts;
-
         $recentPosts = Post::with('category', 'user')->orderBy('created_at', 'DESC')->paginate(100);
         return view('pages.homepage', compact(['posts', 'tags', 'recentPosts', 'firstPosts', 'lastPosts', 'moreView', 'trendingPosts', 'popularPosts', 'secondPosts']));
     }
 
 
     public function about(){
-        // $user = User::first();
 
         return view('pages.about');
     }
@@ -52,23 +49,42 @@ class FrontEndController extends Controller
         return view('pages.newsdetails', compact(['post', 'posts', 'categories', 'tags', 'relatedPosts', 'popularNews']));
         
     }
+
+    
+    // News category view controller 
     public function category($slug){
         $category = Category::where('slug', $slug)->first();
         if($category){
-            $posts = Post::where('category_id', $category->id)->paginate(50);
+            $posts = Post::where('category_id', $category->id)->paginate(9);
         }else{
             return redirect()->route('homepage');
         }
 
-        // $leftSidePost = $posts->splice(0, 20);
-        // $rightSidePost = $posts->splice(0, 20);
-        
-        return view('pages.latestnews', compact(['category', 'posts']));
+        return view('pages.categorynews', compact(['category', 'posts']));
     }
+
+    // News tag view controller 
+    public function tag($slug){
+        $tag = Tag::where('slug', $slug)->first();
+        if($tag){
+            $posts = $tag->posts()->orderBy('created_at', 'desc')->paginate(9);
+            return view('pages.tagnew', compact(['tag', 'posts']));
+        }else{
+            return redirect()->route('homepage');
+        }
+
+        
+    }
+
+
+
+
     public function region(){
 
         return view('pages.region');
     }
+
+
     public function contact(){
 
         return view('pages.contact');

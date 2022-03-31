@@ -217,7 +217,7 @@
                         <ul class="list-unstyled list-inline">
                             <li class="list-inline-item"><a href="{{route('pages.region')}}">Regions</a></li>
                             @foreach ($categories as $category)
-                            <li class="list-inline-item"><a href="{{route('pages.latestnews', ['slug' => $category->slug])}}">{{$category->name}}</a></li>
+                            <li class="list-inline-item"><a href="{{route('pages.categorynews', ['slug' => $category->slug])}}">{{$category->name}}</a></li>
                             @endforeach
                             <li class="list-inline-item mega-mnu"><a>More <i class="fa fa-angle-down"></i></a>
                                 <ul class="mega-menu">

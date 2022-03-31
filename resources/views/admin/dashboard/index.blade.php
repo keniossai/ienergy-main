@@ -58,31 +58,31 @@
             <div class="col-xs-6 col-xxl-3 m-b-30">
                 <div class="card card-statistics h-100 m-b-0 bg-pink">
                     <div class="card-body">
-                        <h2 class="text-white mb-0">128</h2>
-                        <p class="text-white">All News</p>
+                        <h2 class="text-white mb-0">{{$postCount}}</h2>
+                        <p class="text-white">News</p>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6 col-xxl-3 m-b-30">
                 <div class="card card-statistics h-100 m-b-0 bg-primary">
                     <div class="card-body">
-                        <h2 class="text-white mb-0">758</h2>
-                        <p class="text-white">Sale Properties</p>
+                        <h2 class="text-white mb-0">{{$categoryCount}}</h2>
+                        <p class="text-white">Categories</p>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6 col-xxl-3 m-b-30">
                 <div class="card card-statistics h-100 m-b-0 bg-orange">
                     <div class="card-body">
-                        <h2 class="text-white mb-0">2521</h2>
-                        <p class="text-white">Categories</p>
+                        <h2 class="text-white mb-0">{{$tagCount}}</h2>
+                        <p class="text-white">Tags</p>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6 col-xxl-3 m-b-30">
                 <div class="card card-statistics h-100 m-b-0 bg-info">
                     <div class="card-body">
-                        <h2 class="text-white mb-0">500</h2>
+                        <h2 class="text-white mb-0">{{$userCount}}</h2>
                         <p class="text-white">Users</p>
                     </div>
                 </div>

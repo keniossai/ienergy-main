@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Session;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
@@ -86,8 +87,16 @@ class ContactController extends Controller
      * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contact $contact)
+    public function destroy($id)
     {
-        //
+        $message = Contact::find($id);
+
+        if($message){
+            $message->delete();
+
+            Session::flash('success', 'Message deleted successfully');
+            return redirect()->back();
+        }
+
     }
 }
