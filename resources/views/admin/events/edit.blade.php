@@ -59,30 +59,7 @@
                                         <h4 class="card-title">Event Date</h4>
                                         <input class="form-control" type="date" value="{{$event->date}}" name="date" id="date" placeholder="Event Date">
                                     </div>
-                                    {{-- <div class="card-heading form-group mt-2">
-                                        <h4 class="card-title">Event Place</h4>
-                                        <input class="form-control" type="text" value="{{$event->place}}" name="place" id="place" placeholder="Event Place">
-                                    </div> --}}
-                                    {{-- <div class="card-heading mt-2">
-                                        <h4 class="card-title">Event Status</h4>
-                                    </div>
-                                    <div class="form-group mb-0">
-                                        <select class="form-control" name="status" id="status">
-                                            <option {{ $event->event_type == 'paid' ?'selected':'' }} value="paid"> Paid </option>
-                                            <option {{ $event->event_type == 'free' ?'selected':'' }} value="free"> Free </option>
-                                         </select>
-                                    </div> --}}
-                                    {{-- <div class="card-heading mt-2">
-                                        <h4 class="card-title">Event Type</h4>
-                                    </div>
-                                    <div class="form-group">
-                                        <select class="js-basic-multiple form-control" name="event_type" id="event_type" multiple="multiple">
-                                            <optgroup selected label="Select Type">
-                                                <option {{ $event->status == '1' ?'selected':'' }} value="1"> Active </option>
-                                                <option {{ $event->status == '0' ?'selected':'' }} value="0"> Inactive </option>
-                                            </optgroup>
-                                        </select>
-                                    </div> --}}
+                                    
                                     <div class="card-heading form-group mt-5">
                                         <div class="row">
                                             <div class="col-8">

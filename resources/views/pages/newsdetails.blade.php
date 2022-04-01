@@ -77,7 +77,7 @@
                                         @if ($post->tags()->count() > 0)
                                             <li class="list-inline-item">Tags :</li>
                                             @foreach ($post->tags as $tag)
-                                            <li class="list-inline-item"><a href="">#{{$tag->name}}</a>,</li>
+                                            <li class="list-inline-item"><a href="{{route('pages.tagnew', ['slug' => $tag->slug])}}">#{{$tag->name}}</a>,</li>
                                             @endforeach                                            
                                         @endif
                                         
@@ -242,21 +242,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="tag-widget">
-                                    <div class="sec-title">
-                                        <h5>Tag List</h5>
-                                    </div>
-                                    <div class="tag-box">
-                                        @foreach ($tags as $tag)
-                                        <a href="{{route('pages.tagnew', ['slug' => $tag->slug])}}">{{$tag->name}}</a>
-                                        @endforeach
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    
                     </div>
                 </div>
                 <div class="col-md-12">

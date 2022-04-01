@@ -52,31 +52,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="py-5 profile-counter">
-                                        <ul class="nav justify-content-center text-center">
-                                            <li class="nav-item border-right px-3">
-                                                <div>
-                                                    <h4 class="mb-0">90</h4>
-                                                    <p>Post</p>
-                                                </div>
-                                            </li>
-
-                                            <li class="nav-item border-right px-3">
-                                                <div>
-                                                    <h4 class="mb-0">1.5K</h4>
-                                                    <p>Messages</p>
-                                                </div>
-                                            </li>
-
-                                            <li class="nav-item px-3">
-                                                <div>
-                                                    <h4 class="mb-0">4.4K</h4>
-                                                    <p>Members</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-9 border-t border-right">
@@ -110,7 +85,7 @@
                                                     <textarea name="description" class="form-control" id="description" cols="62" rows="5"></textarea>
                                                 </div>
                                                 
-                                                <button type="submit" class="btn btn-primary">Update Information</button>
+                                                <button type="submit" class="btn btn-dark">Update Information</button>
                                             </div>
                                         </div>
                                     </form>

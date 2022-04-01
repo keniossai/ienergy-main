@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- app favicon -->
-    <link rel="shortcut icon" href="panel/img/favicon.ico">
+    <link rel="shortcut icon" href="{{asset('panel')}}/img/favicon.ico">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <!-- plugin stylesheets -->
@@ -46,7 +46,7 @@
                             <i class="ti ti-align-right"></i>
                         </button>
                         {{-- <a href="javascript:void:(0)" data-toggle="collapse" role="button" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation" class="mobile-toggle"><i class="ti ti-align-right"></i></a> --}}
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="{{route('dashboard')}}">
                             <img src="{{asset('panel/img/logo.png')}}" class="img-fluid logo-desktop" alt="logo" />
                             <img src="{{asset('panel/img/logo-icon.png')}}" class="img-fluid logo-mobile" alt="logo" />
                         </a>
@@ -62,11 +62,6 @@
                                 <li class="nav-item">
                                     <a href="javascript:void(0)" class="nav-link sidebar-toggle">
                                         <i class="ti ti-align-right"></i>
-                                    </a>
-                                </li>
-                                <li class="nav-item full-screen d-none d-lg-block" id="btnFullscreen">
-                                    <a href="javascript:void(0)" class="nav-link expand">
-                                        <i class="icon-size-fullscreen"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -108,14 +103,10 @@
                                         <div class="p-4">
                                             <a class="dropdown-item d-flex nav-link" href="{{route('users.profile')}}">
                                                 <i class="fa fa-user pr-2 text-success"></i> Profile</a>
-                                            <a class="dropdown-item d-flex nav-link" href="javascript:void(0)">
-                                                <i class="fa fa-envelope pr-2 text-primary"></i> Inbox
-                                                <span class="badge badge-primary ml-auto">6</span>
-                                            </a>
-                                            <a class="dropdown-item d-flex nav-link" href="settings">
+                                            <a class="dropdown-item d-flex nav-link" href="{{route('settings.edit')}}">
                                                 <i class=" ti ti-settings pr-2 text-info"></i> Settings
                                             </a>
-                                            <a class="dropdown-item d-flex nav-link" href="lockscreen">
+                                            <a class="dropdown-item d-flex nav-link" href="{{route('lockscreen.index')}}">
                                                 <i class=" ti ti-lock pr-2 text-dark"></i> Lockscreen
                                             </a>
                                             <a class="dropdown-item d-flex nav-link" href="mailto:kenossai1@gmail.com">
@@ -143,8 +134,8 @@
                                 <a class="has-arrow" href="{{ route('dashboard')}}" aria-expanded="false">
                                     <i class="nav-icon ti ti-home"></i>
                                     <span class="nav-title">Dashboard</span>
-                                    <span class="nav-label label label-danger">9</span>
-                                </a></li>
+                                </a>
+                            </li>
                                 <li>
                                     <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="nav-icon ti ti-pin"></i><span class="nav-title">Posts</span> </a>
                                     <ul aria-expanded="false">
@@ -154,14 +145,7 @@
                                         <li> <a href="{{ route('tag.index')}}">Tags</a> </li>
                                     </ul>
                                 </li>
-                            <li><a href="media"><i class="fa fa-picture-o" aria-hidden="true"></i><span class="nav-title">Media</span><span class="nav-label label label-success">New</span></a> </li>
-                            <li><a href="{{route('contact.index')}}"><i class="nav-icon ti ti-email"></i><span class="nav-title">Messages</span><span class="nav-label label label-success">2</span></a> </li>
-                            <li>
-                                <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="nav-icon ti ti-layout-column3-alt"></i><span class="nav-title">Pages</span> </a>
-                                <ul aria-expanded="false">
-                                    <li> <a href="/">Home</a> </li>
-                                </ul>
-                            </li>
+                            <li><a href="{{route('contact.index')}}"><i class="nav-icon ti ti-email"></i><span class="nav-title">Messages</span></a> </li>
                             <li>
                                 <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-calendar-check    "></i><span class="nav-title">Events</span> </a>
                                 <ul aria-expanded="false">
@@ -170,7 +154,7 @@
                                 </ul>
                             </li>
                             <li><a href="calendar"><i class="fa fa-calendar" aria-hidden="true"></i><span class="nav-title">Calendar</span></a></li>
-                            <li><a href="comments"><i class="nav-icon ti ti-comment"></i><span class="nav-title">Comments</span><span class="nav-label label label-danger">2</span></a> </li>
+                            <li><a href="comments"><i class="nav-icon ti ti-comment"></i><span class="nav-title">Comments</span></a> </li>
                             <li>
                                 <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class=" ti ti-settings pr-2 text-info"></i><span class="nav-title">Settings</span></a>
                                 <ul aria-expanded="false">
@@ -195,7 +179,7 @@
                             </li>
                             <li class="sidebar-banner p-4 bg-gradient text-center m-3 d-block rounded">
                                 <h5 class="text-white mb-1">iEnergyAfrica</h5>
-                                <a class="btn btn-square bg-dark btn-xl d-inline-block mt-2 mb-0" href="/"> Go to website</a>
+                                <a class="btn btn-square bg-dark btn-xl d-inline-block mt-2 mb-0" target="_blank" href="/"> Go to website</a>
                             </li>
                         </ul>
                     </div>

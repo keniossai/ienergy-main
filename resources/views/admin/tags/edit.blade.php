@@ -41,7 +41,7 @@
                     <div class="card-header">
                         <div class="ml-auto d-flex justify-content-between align-items-center secondary-menu text-center">
                             <h4 class="card-title">Edit tag - {{$tag->name}}</h4>
-                            <a class="btn btn-primary" href="{{route('tag.index')}}">
+                            <a class="btn btn-dark" href="{{route('tag.index')}}">
                                 Back to tag List
                             </a>
                         </div>
@@ -64,7 +64,7 @@
                                             <label for="description">Description</label>
                                             <textarea name="description" id="description" class="form-control" rows="4" placeholder="Enter description">{{ $tag->description }}</textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Update Tag</button>
+                                        <button type="submit" class="btn btn-dark">Update Tag</button>
                                     </div>
                                 </form>
                             </div>

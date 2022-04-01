@@ -27,13 +27,13 @@
                         </nav>
                     </div>
                     <div class="ml-auto d-flex align-items-center secondary-menu text-center">
-                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="News">
+                        <a href="{{route('homepage')}}" class="tooltip-wrapper" target="_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="News">
                             <i class="fa fa-lightbulb-o btn btn-icon text-success"></i>
                         </a>
                         <a href="calendar" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Calendar">
                             <i class="fa fa-calendar-o btn btn-icon text-cyan"></i>
                         </a>
-                        <a class="btn btn-primary" href="{{ route('post.create')}}">
+                        <a class="btn btn-dark" href="{{ route('post.create')}}">
                             Add New
                         </a>
                     </div>
@@ -113,40 +113,7 @@
             @endif
         </div>
         <!-- event Modal -->
-        <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="verticalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="verticalCenterTitle">Add New Event</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="modelemail">Event Name</label>
-                                <input type="email" class="form-control" id="modelemail">
-                            </div>
-                            <div class="form-group">
-                                <label>Choose Event Color</label>
-                                <select class="form-control">
-                                    <option>Primary</option>
-                                    <option>Warning</option>
-                                    <option>Success</option>
-                                    <option>Danger</option>
-                                </select>
-                            </div>
-
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
     <!-- end container-fluid -->
 </div>

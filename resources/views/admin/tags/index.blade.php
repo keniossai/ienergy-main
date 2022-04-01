@@ -40,7 +40,7 @@
                     <div class="card-header">
                         <div class="ml-auto d-flex justify-content-between align-items-center secondary-menu text-center">
                             <h4 class="card-title">Tag List</h4>
-                            <a class="btn btn-primary" href="tag/create">
+                            <a class="btn btn-dark" href="tag/create">
                                 Add Tag
                             </a>
                         </div>

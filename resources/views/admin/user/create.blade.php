@@ -41,7 +41,7 @@
                     <div class="card-header">
                         <div class="ml-auto d-flex justify-content-between align-items-center secondary-menu text-center">
                             <h4 class="card-title">Create User</h4>
-                            <a class="btn btn-primary" href="{{route('users.index')}}">
+                            <a class="btn btn-dark" href="{{route('users.index')}}">
                                 Back to User List
                             </a>
                         </div>
@@ -68,7 +68,7 @@
                                             <input type="password" name='password' id="password" class="form-control" placeholder="Enter password">
                                         </div>
                                         
-                                        <button type="submit" class="btn btn-primary">Create User</button>
+                                        <button type="submit" class="btn btn-dark">Create User</button>
                                     </div>
                                 </form>
                             </div>

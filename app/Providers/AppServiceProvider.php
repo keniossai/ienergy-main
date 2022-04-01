@@ -6,6 +6,8 @@ use App\Models\Category;
 use App\Models\Setting;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
+use Illuminate\Pagination\Paginator;
+
 
 
 class AppServiceProvider extends ServiceProvider
@@ -34,5 +36,7 @@ class AppServiceProvider extends ServiceProvider
         // Setting Service Provider
         $setting = Setting::first();
         View::share('setting', $setting);
+
+        Paginator::useBootstrap();
     }
 }

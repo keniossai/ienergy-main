@@ -19,7 +19,6 @@ class DashBoardController extends Controller
         $categoryCount = Category::all()->count();
         $tagCount = Tag::all()->count();
         $userCount = User::all()->count();
-        // $messageCount = Message::all()->count();
         return view('admin.dashboard.index', compact(['posts', 'postCount', 'categoryCount', 'tagCount', 'userCount']));
     }
     public function calendar(){

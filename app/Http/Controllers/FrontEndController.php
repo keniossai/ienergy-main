@@ -26,7 +26,7 @@ class FrontEndController extends Controller
 
         $tags = Tag::all();
 
-        $recentPosts = Post::with('category', 'user')->orderBy('created_at', 'DESC')->paginate(100);
+        $recentPosts = Post::with('category', 'user')->orderBy('created_at', 'DESC')->paginate(200);
         return view('pages.homepage', compact(['posts', 'tags', 'recentPosts', 'firstPosts', 'lastPosts', 'moreView', 'trendingPosts', 'popularPosts', 'secondPosts']));
     }
 
@@ -83,6 +83,19 @@ class FrontEndController extends Controller
 
         return view('pages.region');
     }
+    public function search(){
+
+       $search_text = $_GET['query'];
+       $recentPosts = Post::where('title', 'LIKE', '%'.$search_text.'%')->with('category')->get();
+    //    $lastPosts = Post::where('title', 'LIKE', '%'.$search_text.'%')->with('category')->get();
+    //    $trendingPosts = Post::where('title', 'LIKE', '%'.$search_text.'%')->with('category')->get();
+    //    $popularPosts = Post::where('title', 'LIKE', '%'.$search_text.'%')->with('category')->get();
+    //    $secondPosts = Post::where('title', 'LIKE', '%'.$search_text.'%')->with('category')->get();
+    //    $moreView = Post::where('title', 'LIKE', '%'.$search_text.'%')->with('category')->get();
+    //    $tags = Tag::where('name', 'LIKE', '%'.$search_text.'%')->with('tag')->get();
+
+       return view('pages.search', compact(['recentPosts']));
+    }
 
 
     public function contact(){
@@ -96,7 +109,7 @@ class FrontEndController extends Controller
             'name' => 'required|max:200',
             'email' => 'required|email|max:200',
             'subject' => 'required|max:255',
-            'message' => 'required|max:200',
+            'message' => 'required|max:2000',
 
         ]);
 

@@ -80,7 +80,7 @@
                                         </div>
                                     </div>
                                     <div class="card-heading mt-5">
-                                        <h4 class="card-title">Summernote</h4>
+                                        <h4 class="card-title">Description</h4>
                                         <textarea  name="description" id="description" class="form-control" value="{{old('description')}}" rows="20"></textarea>
                                     </div>
                                     <button type="submit" class="btn bg-dark text-white btn-block mt-3">Create Post</button>

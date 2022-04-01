@@ -370,6 +370,40 @@ $(document).ready(function(){
 			srcAction: 'iframe_src'
 		}
 	});
+	$('#video-btn2').magnificPopup({
+		type: 'iframe',
+		iframe: {
+			markup: '<div class="mfp-iframe-scaler">' +
+					'<div class="mfp-close"></div>' +
+					'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+				  '</div>',
+			patterns: {
+				youtube: {
+					index: 'youtube.com/',
+					id: 'v=',
+					src: 'http://www.youtube.com/embed/%id%?autoplay=1'
+				}
+			},
+			srcAction: 'iframe_src'
+		}
+	});
+	$('#video-btn3').magnificPopup({
+		type: 'iframe',
+		iframe: {
+			markup: '<div class="mfp-iframe-scaler">' +
+					'<div class="mfp-close"></div>' +
+					'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+				  '</div>',
+			patterns: {
+				youtube: {
+					index: 'youtube.com/',
+					id: 'v=',
+					src: 'http://www.youtube.com/embed/%id%?autoplay=1'
+				}
+			},
+			srcAction: 'iframe_src'
+		}
+	});
 
 	/***** Smooth Scroll *****/
 	smoothScroll.init({

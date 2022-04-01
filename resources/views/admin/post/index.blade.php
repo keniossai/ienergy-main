@@ -85,7 +85,7 @@
                                                     @csrf
                                                     <button type="summit" class="btn btn-icon btn-outline-danger btn-round "><i class="fa fa-trash" aria-hidden="true"></i></button>
                                                 </form>
-                                                <a href="{{route('pages.newsdetails', ['slug' => $post->slug])}}" class="btn btn-icon btn-outline-dark btn-round ml-2"><i class="ti ti-link"></i></a>
+                                                <a href="{{route('pages.newsdetails', ['slug' => $post->slug])}}" target="_blank" class="btn btn-icon btn-outline-dark btn-round ml-2"><i class="ti ti-link"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -96,10 +96,14 @@
                                     </td>
                                 </tr>
                                 @endif
+                                <div class="card-footer">
+                                    {{$posts->links()}}
+                                </div>
                             </tbody>
                         </table>
                     </div>
                 </div>
+                
             </div>
         </div>
         <!-- end-clients contant-->
@@ -112,5 +116,7 @@
     vertical-align: middle;
     white-space: nowrap !important;
 }
+
+
 </style>
 @endsection

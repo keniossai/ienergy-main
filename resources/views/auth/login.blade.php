@@ -6,10 +6,10 @@
     <div class="bg-white">
         <div class="container-fluid p-0">
             <div class="row no-gutters">
-                <div class="col-sm-6 col-lg-5 col-xxl-3  align-self-center order-2 order-sm-1">
+                <div class="col-sm-6  align-self-center order-2 order-sm-1">
                     <div class="d-flex align-items-center h-100-vh">
                         <div class="login p-50">
-                            <img class="w-90" src="{{asset('panel/img/logo-dark.png')}}" alt="">
+                            <img class="" src="{{asset('panel/img/logo-dark.png')}}" alt="">
                             <p>Welcome back, please login to your account.</p>
                             @if (session('status'))
                                 <div class="mb-4 font-medium text-sm text-green-600">
@@ -46,7 +46,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12 mt-3">
-                                        <button class="btn btn-primary text-uppercase">
+                                        <button class="btn btn-dark text-uppercase">
                                             Login
                                         </button>
                                     </div>
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-xxl-9 col-lg-7 bg-gradient o-hidden order-1 order-sm-2">
+                <div class="col-md-6 bg-gradient o-hidden order-1 order-sm-2">
                     <div class="row align-items-center h-100">
                         <div class="col-7 mx-auto ">
                             <img class="img-fluid" src="{{asset('panel/img/bg/login.svg')}}" alt="">

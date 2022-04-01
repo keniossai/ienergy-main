@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class EventsController extends Controller
@@ -13,7 +14,17 @@ class EventsController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::orderBy('created_at', 'DESC')->paginate(3);
+        return view('events.index', compact('events'));
+    }
+
+
+
+    public function eventdetail($slug){
+        $event = Event::where('slug', $slug)->first();
+    
+        return view('events.eventdetails', compact('event'));
+        
     }
 
     /**

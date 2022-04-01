@@ -40,7 +40,7 @@
                     <div class="card-header">
                         <div class="ml-auto d-flex justify-content-between align-items-center secondary-menu text-center">
                             <h4 class="card-title">User List</h4>
-                            <a class="btn btn-primary" href="{{route('users.create')}}">
+                            <a class="btn btn-dark" href="{{route('users.create')}}">
                                 Add User
                             </a>
                         </div>
@@ -54,7 +54,7 @@
                             <div class="card-body pb-5 pt-4">
                                 <div class="text-center">
                                     <div class="text-right">
-                                        <h4><span class="badge badge-primary badge-pill px-3 py-2">{{$user->id}}</span></h4>
+                                        <h4><span class="badge badge-dark text-info badge-pill px-3 py-2">{{$user->id}}</span></h4>
                                     </div>
                                     <div class="pt-1 bg-img m-auto"><img style="width: 100px;" src="{{asset($user->image)}}" class="img-fluid" alt="user_image"></div>
                                     <div class="mt-3 employees-contant-inner">

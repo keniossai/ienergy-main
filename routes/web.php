@@ -12,6 +12,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LockScreenController;
 use App\Http\Controllers\EventDashboardController;
+use App\Http\Controllers\EventsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,22 +42,26 @@ Route::get('/nigeria', [FrontEndController::class, 'nigeria'])->name('nigeria');
 
 
 // News Navigation Routes
-Route::get('/people', [FrontEndController::class, 'people'])->name('people');
-Route::get('/insights', [FrontEndController::class, 'insights'])->name('insights');
-Route::get('/rigs-vessel', [FrontEndController::class, 'gas'])->name('gas');
-Route::get('/opinion', [FrontEndController::class, 'opinion'])->name('opinion');
-Route::get('/energy-p', [FrontEndController::class, 'ep'])->name('ep');
-Route::get('/exclusive-news', [FrontEndController::class, 'exclusive'])->name('exclusive');
-Route::get('/africa-news', [FrontEndController::class, 'africa'])->name('africa');
-Route::get('/energy-transition', [FrontEndController::class, 'development'])->name('development');
-Route::get('/frequent-ask-question', [FrontEndController::class, 'faq'])->name('faq');
-Route::get('/energy-finance', [FrontEndController::class, 'energyfinance'])->name('energyfinance');
+// Route::get('/people', [FrontEndController::class, 'people'])->name('people');
+// Route::get('/insights', [FrontEndController::class, 'insights'])->name('insights');
+// Route::get('/rigs-vessel', [FrontEndController::class, 'gas'])->name('gas');
+// Route::get('/opinion', [FrontEndController::class, 'opinion'])->name('opinion');
+// Route::get('/energy-p', [FrontEndController::class, 'ep'])->name('ep');
+// Route::get('/exclusive-news', [FrontEndController::class, 'exclusive'])->name('exclusive');
+// Route::get('/africa-news', [FrontEndController::class, 'africa'])->name('africa');
+// Route::get('/energy-transition', [FrontEndController::class, 'development'])->name('development');
+// Route::get('/frequent-ask-question', [FrontEndController::class, 'faq'])->name('faq');
+// Route::get('/energy-finance', [FrontEndController::class, 'energyfinance'])->name('energyfinance');
 
+
+Route::get('/conferences', [EventsController::class, 'index'])->name('event.index');
+Route::get('/eventdetail/{slug}', [EventsController::class, 'eventdetail'])->name('events.eventdetails');
 
 
 Route::get('/site/about-us', [FrontEndController::class, 'about'])->name('about');
-Route::get('/site/contact-us', [FrontEndController::class, 'contact'])->name('contact');
+Route::get('/contact-us', [FrontEndController::class, 'contact'])->name('contact');
 Route::post('/site/contact-us', [FrontEndController::class, 'send_message'])->name('pages.contact');
+Route::get('/search', [FrontEndController::class, 'search'])->name('search');
 
 
 
@@ -83,3 +88,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'verified']]
     Route::get('/message', [ContactController::class, 'index'])->name('contact.index');
     Route::delete('/message/delete/{id}', [ContactController::class, 'destroy'])->name('contact.destroy');
 });
+
+

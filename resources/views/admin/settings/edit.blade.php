@@ -131,7 +131,7 @@
                                                     <label for="description">Description</label>
                                                     <textarea name="description" class="form-control" id="description" rows="5">{{$setting->description}}</textarea>
                                                 </div>
-                                                <button type="submit" class="btn btn-primary">Update Site Info</button>
+                                                <button type="submit" class="btn btn-dark">Update Site Info</button>
                                             </div>
                                         </div>
                                     </form>

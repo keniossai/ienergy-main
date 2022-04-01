@@ -10,7 +10,7 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{asset('assets')}}/img/favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
@@ -61,17 +61,6 @@
                         </ul>
                     </div>
                 </div>
-                {{-- <div class="col-md-3">
-                    <div class="bar-social text-right">
-                        <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-linkedin"></i></a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-rss"></i></a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-youtube"></i></a></li>
-                        </ul>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </section>
@@ -88,8 +77,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="searchbar text-right">
-                        <form action="#">
-                            <input placeholder="Search..." type="text" required>
+                        <form action="{{route('search')}}" method="GET">
+                            <input placeholder="Search..." name="query" type="text" required>
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
@@ -282,7 +271,7 @@
                                                 <div class="cat-content">
                                                     <ul class="list-unstyled">
                                                         <li><a href="">Edition</a></li>
-                                                        <li><a href="">Industry Events</a></li>
+                                                        <li><a href="{{route('event.index')}}">Industry Events</a></li>
                                                         <li><a href="">Newsletter</a></li>
                                                         <li><a href="">Breaking News Letter</a></li>
                                                         <li><a href="">RSS</a></li>
@@ -299,8 +288,8 @@
                                                 </div>
                                                 <div class="cat-content">
                                                     <ul class="list-unstyled">
-                                                        <li><a href="about.html">About Us</a></li>
-                                                        <li><a href="contact-us">Contact Us</a></li>
+                                                        <li><a href="{{route('about')}}">About Us</a></li>
+                                                        <li><a href="{{route('contact')}}">Contact Us</a></li>
                                                         <li><a href="">Subscribe</a></li>
                                                         <li><a href="frequent-ask-question">Faq</a></li>
                                                         <li><a href="">Advertise</a></li>

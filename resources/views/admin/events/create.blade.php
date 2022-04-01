@@ -26,7 +26,7 @@
                                 <li class="breadcrumb-item">
                                     <a href="{{route('post.index')}}">Event list</a>
                                 </li>
-                                <li class="breadcrumb-item active text-primary" aria-current="page">Create Event</li>
+                                <li class="breadcrumb-item active text-info" aria-current="page">Create Event</li>
                             </ol>
                         </nav>
                     </div>

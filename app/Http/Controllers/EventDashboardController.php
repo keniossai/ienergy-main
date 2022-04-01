@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use Session;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class EventDashboardController extends Controller
@@ -49,6 +50,7 @@ class EventDashboardController extends Controller
 
         $event = Event::create([
             'title' => $request->title,
+            'slug' => Str::slug($request->title),
             'description' => $request->description,
             'image' => 'image.jpg',
             'date' => $request->date,
@@ -108,6 +110,7 @@ class EventDashboardController extends Controller
         ]);
 
         $event->title = $request->title;
+        $event->slug = Str::slug($request->title);
         $event->description = $request->description;
         $event->date = $request->date;
         $event->save();

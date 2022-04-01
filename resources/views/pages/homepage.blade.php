@@ -274,7 +274,55 @@
     </div>
 </section>
 <!-- End News Area 2 -->
-
+<section class="gallery-area">
+    <div class="container">
+        <div class="row p-5">
+            
+            <div class="col-md-4">
+                <div class="video-gallery">
+                    <div class="sec-title">
+                        <h5>US warns against rising oil imports, New Delhi continues to buy Russian oil<i class="fa fa-caret-right"></i></h5>
+                    </div>
+                    <div class="video-lg">
+                        <div class="video-table">
+                            <div class="video-tablecell text-center">
+                                <a href="https://www.youtube.com/watch?v=WrVSHNJ8Clc" id="video-btn"><i class="fa fa-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="video-gallery">
+                    <div class="sec-title">
+                        <h5>Oil prices drop 6%, inflation impact on discount retail market<i class="fa fa-caret-right"></i></h5>
+                    </div>
+                    <div class="video-lg mt-2">
+                        <div class="video-table">
+                            <div class="video-tablecell text-center">
+                                <a href="https://www.youtube.com/watch?v=S7p_9pQgVHQ" id="video-btn2"><i class="fa fa-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="video-gallery">
+                    <div class="sec-title">
+                        <h5>Donald Trump asks Vladimir Putin for a political favor<i class="fa fa-caret-right"></i></h5>
+                    </div>
+                    <div class="video-lg">
+                        <div class="video-table">
+                            <div class="video-tablecell text-center">
+                                <a href="https://www.youtube.com/watch?v=aD2XkbVrzbs" id="video-btn3"><i class="fa fa-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Video Area -->
 <section class="news-area">
     <div class="container">

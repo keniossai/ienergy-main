@@ -12775,13 +12775,14 @@ a.text-dark:hover {
 }
 
 .bg-gradient {
-    background: #8e54e9;
-    background: -moz-linear-gradient(left, #8e54e9 0, #4776e6 100%) !important;
-    background: -webkit-gradient(linear, left, right, color-stop(0, #8e54e9), color-stop(100%, #4776e6)) !important;
-    background: -webkit-linear-gradient(left, #8e54e9 0, #4776e6 100%) !important;
+    background: #000;
+    /* background: -moz-linear-gradient(left, #8e54e9 0, #4776e6 100%) !important; */
+    /* background: -webkit-gradient(linear, left, right, color-stop(0, #8e54e9), color-stop(100%, #4776e6)) !important;
+    /* background: -webkit-linear-gradient(left, #8e54e9 0, #4776e6 100%) !important;
     background: -o-linear-gradient(left, #8e54e9 0, #4776e6 100%) !important;
     background: -ms-linear-gradient(left, #8e54e9 0, #4776e6 100%) !important;
-    background: linear-gradient(to right, #8e54e9 0, #4776e6 100%) !important
+    background: linear-gradient(to right, #00bce4 0, #00bce4 100%) !important; */
+    background-image: linear-gradient(to left, #4c97d1, #3fa0d8, #30aadd, #1db3e1, #00bce4);
 }
 
 .bg-gradient-overlay:before {
@@ -12932,7 +12933,7 @@ p-bottom-0 {
 }
 
 .text-primary {
-    color: #8e54e9 !important
+    color: #00BCE4 !important
 }
 
 .text-info {
@@ -12956,7 +12957,7 @@ a.text-primary:active {
 }
 
 a.text-primary:visited {
-    color: #7630e4 !important
+    color: #00BCE4 !important
 }
 
 a.text-secondary {
@@ -14253,7 +14254,7 @@ a.text-pink:visited {
 }
 
 .font-20 {
-    font-size: 1.25rem !important;
+    font-size: 1.45rem !important;
     line-height: 1.25rem
 }
 
@@ -17162,7 +17163,7 @@ ol.breadcrumb {
 }
 
 .top-bar .navbar .nav-link:hover {
-    color: #8e54e9
+    color: #00BCE4
 }
 
 @media screen and (min-width:577px) and (max-width:767px) {
@@ -17380,7 +17381,7 @@ ol.breadcrumb {
 .top-bar .navbar .nav-right .nav-item.user-profile .dropdown-menu a.dropdown-item:focus,
 .top-bar .navbar .nav-right .nav-item.user-profile .dropdown-menu a.dropdown-item:hover {
     background-color: transparent;
-    color: #8e54e9
+    color: #00BCE4
 }
 
 .top-bar .navbar .nav-right .nav-item.user-profile .dropdown-menu a.dropdown-item i {
@@ -18470,7 +18471,7 @@ a {
 
 a:focus,
 a:hover {
-    color: #8e54e9;
+    color: #00BCE4;
     text-decoration: none
 }
 
@@ -18502,7 +18503,7 @@ dl dd {
 }
 
 svg {
-    width: 100% !important
+    width: 10px !important
 }
 
 canvas {
@@ -18880,7 +18881,7 @@ code {
     line-height: 40px;
     font-size: 1.3rem;
     background: #fff;
-    color: #8e54e9;
+    color: #00BCE4;
     box-shadow: 0 0 20px rgba(115, 105, 215, .2)
 }
 
@@ -19164,7 +19165,7 @@ code {
 }
 
 .badge-primary {
-    background-color: #8e54e9;
+    background-color: #00BCE4;
     color: #fff
 }
 
@@ -21429,7 +21430,7 @@ code {
 }
 
 .page-link {
-    color: #8e54e9
+    color: #000;
 }
 
 .page-link:focus,
@@ -21439,8 +21440,8 @@ code {
 }
 
 .page-item.active .page-link {
-    background-color: #8e54e9;
-    border-color: #8e54e9
+    background-color: #00BCE4;
+    border-color: #00BCE4;
 }
 
 .checkbox.checbox-switch {
@@ -39471,8 +39472,8 @@ legend {
 
 .input-group-text {
     color: #fff;
-    background-color: #8e54e9;
-    border-color: #8e54e9
+    background-color: #00BCE4;
+    border-color: #00BCE4
 }
 
 .bootstrap-duallistbox-container label {
@@ -40889,7 +40890,7 @@ table.dataTable thead .sorting_desc_disabled:before {
 
 .portfolio-item .portfolio-overlay {
     width: 100%;
-    background: #8e54e9 !important;
+    background: #00BCE4 !important;
     padding: 10px 0;
     position: absolute;
     bottom: -80px;

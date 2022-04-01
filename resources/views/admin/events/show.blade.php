@@ -26,7 +26,7 @@
                                 <li class="breadcrumb-item">
                                     <a href="{{route('post.index')}}">Event list</a>
                                 </li>
-                                <li class="breadcrumb-item active text-primary" aria-current="page">View Event</li>
+                                <li class="breadcrumb-item active text-dark" aria-current="page">View Event</li>
                             </ol>
                         </nav>
                     </div>
@@ -44,7 +44,7 @@
                             <div class="card-header">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h3 class="card-title">{{$event->title}}</h3>
-                                    <a href="{{ route('events.index') }}" class="btn btn-primary">Go Back to Event List</a>
+                                    <a href="{{ route('events.index') }}" class="btn btn-dark">Go Back to Event List</a>
                                 </div>
                             </div>
                             <div class="card-body">
