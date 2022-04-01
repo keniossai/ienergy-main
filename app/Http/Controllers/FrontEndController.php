@@ -17,16 +17,16 @@ class FrontEndController extends Controller
         $lastPosts = $posts->splice(0, 2);
         $trendingPosts = $posts->splice(0, 3);
 
-        $moreNews = Post::with('category', 'user')->orderBy('created_at', 'DESC')->take(9)->get();
-        $moreView = $moreNews->splice(4, 9);
+        $moreNews = Post::with('category', 'user')->orderBy('created_at', 'DESC')->take(20)->get();
+        $moreView = $moreNews->splice(4, 20);
 
-        $popularNews = Post::with('category', 'user')->orderBy('created_at', 'DESC')->take(26)->get();
-        $popularPosts = $popularNews->splice(14, 6);
-        $secondPosts = $popularNews->splice(14, 6);
+        $popularNews = Post::with('category', 'user')->orderBy('created_at', 'DESC')->take(30)->get();
+        $popularPosts = $popularNews->splice(20, 6);
+        $secondPosts = $popularNews->splice(20, 6);
 
         $tags = Tag::all();
 
-        $recentPosts = Post::with('category', 'user')->orderBy('created_at', 'DESC')->paginate(200);
+        $recentPosts = Post::with('category', 'user')->orderBy('created_at', 'DESC')->paginate(1000);
         return view('pages.homepage', compact(['posts', 'tags', 'recentPosts', 'firstPosts', 'lastPosts', 'moreView', 'trendingPosts', 'popularPosts', 'secondPosts']));
     }
 
