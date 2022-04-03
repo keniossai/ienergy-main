@@ -107,9 +107,11 @@
                         <div class="col-md-12">
                             <div class="comment-sec">
                                 <div class="sec-title">
-                                    <h5>Comments <span>(03)</span></h5>
+                                    <h5 id="dsq-count-scr">Comments <span></span></h5>
+                                    <a href="{{route('pages.newsdetails', ['slug' => $post->slug])}}#disqus_thread">Comments</a>
                                 </div>
-                                <div class="comment-box d-flex">
+                                <div id="disqus_thread"></div>
+                                {{-- <div class="comment-box d-flex">
                                     <div class="comment-img">
                                         <a href=""><img src="{{asset('assets')}}/img/comm-1.jpg" alt=""></a>
                                     </div>
@@ -147,10 +149,10 @@
                                         <span>Feb 11, 2019 at 3:15pm</span>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam, non magnam molestias aspernatur. Magni suscipit sequi harum odit sunt est.</p>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        {{-- <div class="col-md-12">
                             <div class="comment-form">
                                 <div class="sec-title">
                                     <h5>Leave Your Comment</h5>
@@ -170,7 +172,7 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
@@ -272,3 +274,18 @@
     </section>
     <!-- End News Details Area -->
 @endsection
+
+@section('script')
+    
+    <script>
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://ienergy-news.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <script id="dsq-count-scr" src="//ienergy-news.disqus.com/count.js" async></script>
+@endsection
+

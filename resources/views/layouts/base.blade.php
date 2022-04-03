@@ -555,6 +555,7 @@
 <!-- Custom JS -->
 <script src="{{asset('assets')}}/js/plugins.js"></script>
 <script src="{{asset('assets')}}/js/custom.js"></script>
+@yield('script')
 
 </body>
 
