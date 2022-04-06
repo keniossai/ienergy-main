@@ -308,4 +308,7 @@
     .mv-item .mv-box{
         display: grid;
     }
+    .show-none{
+        display: none;
+    }
 }

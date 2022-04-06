@@ -65,14 +65,13 @@
         </div>
     </section>
     <!-- End Top Bar -->
-    
     <!-- Logo Area -->
     <section class="logo-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="logo">
-                        <a href="/"><img style="margin-left: 300px; width: 400px;" src="{{asset('assets')}}/img/logo.png" alt="" class="img-fluid"></a>
+                        <a href="/"><img style="margin-left: 350px; width: 400px;" src="{{asset('assets')}}/img/logo.png" alt="" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -88,113 +87,8 @@
     </section>
     <!-- End Logo Area -->
 
-    
-      
+  
 
-
-    {{-- <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="norkon-ticker ff-flama fs-md" style=""><div class="wrapper"><div class="py-3 ticker-carousel owl-carousel owl-loaded owl-drag"><div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1272px, 0px, 0px); transition: 0s; width: 3816px;"><div class="owl-item cloned" style="width: 212px;"><div><div>
-                    Brent spot<br> <span class="col-blue">
-                      $107.80
-                    </span> <span class="fw-medium positive">
-                      ▴ +10.04%
-                    </span></div></div></div><div class="owl-item cloned" style="width: 212px;"><div><div>
-                    Brent futures (1 mo)<br> <span class="col-blue">
-                      $108.20
-                    </span> <span class="fw-medium positive">
-                      ▴ +1.46%
-                    </span></div></div></div><div class="owl-item cloned" style="width: 212px;"><div><div>
-                    WTI spot<br> <span class="col-blue">
-                      $105.35
-                    </span> <span class="fw-medium positive">
-                      ▴ +10.52%
-                    </span></div></div></div><div class="owl-item cloned" style="width: 212px;"><div><div>
-                    WTI futures (1 mo)<br> <span class="col-blue">
-                      $105.30
-                    </span> <span class="fw-medium positive">
-                      ▴ +2.25%
-                    </span></div></div></div><div class="owl-item cloned" style="width: 212px;"><div><div>
-                    UK Nat Gas (1 mo)<br> <span class="col-blue">
-                      240.00p
-                    </span> <span class="fw-medium negative">
-                      ▾ -3.92%
-                    </span></div></div></div><div class="owl-item cloned" style="width: 212px;"><div><div>
-                    UK Nat Gas (2 mo)<br> <span class="col-blue">
-                      243.74p
-                    </span> <span class="fw-medium negative">
-                      ▾ -3.18%
-                    </span></div></div></div><div class="owl-item active" style="width: 212px;"><div><div>
-                    Brent spot<br> <span class="col-blue">
-                      $107.80
-                    </span> <span class="fw-medium positive">
-                      ▴ +10.04%
-                    </span></div></div></div><div class="owl-item active" style="width: 212px;"><div><div>
-                    Brent futures (1 mo)<br> <span class="col-blue">
-                      $108.20
-                    </span> <span class="fw-medium positive">
-                      ▴ +1.46%
-                    </span></div></div></div><div class="owl-item active" style="width: 212px;"><div><div>
-                    WTI spot<br> <span class="col-blue">
-                      $105.35
-                    </span> <span class="fw-medium positive">
-                      ▴ +10.52%
-                    </span></div></div></div><div class="owl-item active" style="width: 212px;"><div><div>
-                    WTI futures (1 mo)<br> <span class="col-blue">
-                      $105.30
-                    </span> <span class="fw-medium positive">
-                      ▴ +2.25%
-                    </span></div></div></div><div class="owl-item active" style="width: 212px;"><div><div>
-                    UK Nat Gas (1 mo)<br> <span class="col-blue">
-                      240.00p
-                    </span> <span class="fw-medium negative">
-                      ▾ -3.92%
-                    </span></div></div></div><div class="owl-item active" style="width: 212px;"><div><div>
-                    UK Nat Gas (2 mo)<br> <span class="col-blue">
-                      243.74p
-                    </span> <span class="fw-medium negative">
-                      ▾ -3.18%
-                    </span></div></div></div><div class="owl-item cloned" style="width: 212px;"><div><div>
-                    Brent spot<br> <span class="col-blue">
-                      $107.80
-                    </span> <span class="fw-medium positive">
-                      ▴ +10.04%
-                    </span></div></div></div><div class="owl-item cloned" style="width: 212px;"><div><div>
-                    Brent futures (1 mo)<br> <span class="col-blue">
-                      $108.20
-                    </span> <span class="fw-medium positive">
-                      ▴ +1.46%
-                    </span></div></div></div><div class="owl-item cloned" style="width: 212px;"><div><div>
-                    WTI spot<br> <span class="col-blue">
-                      $105.35
-                    </span> <span class="fw-medium positive">
-                      ▴ +10.52%
-                    </span></div></div></div><div class="owl-item cloned" style="width: 212px;"><div><div>
-                    WTI futures (1 mo)<br> <span class="col-blue">
-                      $105.30
-                    </span> <span class="fw-medium positive">
-                      ▴ +2.25%
-                    </span></div></div></div><div class="owl-item cloned" style="width: 212px;"><div><div>
-                    UK Nat Gas (1 mo)<br> <span class="col-blue">
-                      240.00p
-                    </span> <span class="fw-medium negative">
-                      ▾ -3.92%
-                    </span></div></div></div><div class="owl-item cloned" style="width: 212px;"><div><div>
-                    UK Nat Gas (2 mo)<br> <span class="col-blue">
-                      243.74p
-                    </span> <span class="fw-medium negative">
-                      ▾ -3.18%
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div></div></div>
-            </div>
-        </div>
-    </div> --}}
 
 
     <!-- Menu Area -->
@@ -291,7 +185,7 @@
                                                         <li><a href="{{route('about')}}">About Us</a></li>
                                                         <li><a href="{{route('contact')}}">Contact Us</a></li>
                                                         <li><a href="">Subscribe</a></li>
-                                                        <li><a href="frequent-ask-question">Faq</a></li>
+                                                        <li><a href="{{route('pages.faq')}}">Faq</a></li>
                                                         <li><a href="">Advertise</a></li>
                                                     </ul>
                                                 </div>
@@ -312,7 +206,10 @@
         </div>
     </section>
     <!-- End Menu Area -->
+      
+      <!-- TradingView Widget BEGIN -->
 
+    {{-- <iframe src="https://fxpricing.com/fx-widget/ticker-tape-widget.php?id=1,2,3,5,14,20&d_mode=compact-name" width="100%" height="85" style="border: unset;"></iframe> <div id="fx-pricing-widget-copyright"> <span>Powered by </span><a href="https://fxpricing.com/" target="_blank">FX Pricing</a> </div> <style type="text/css"> #fx-pricing-widget-copyright{ text-align: center; font-size: 13px; font-family: sans-serif; margin-top: 10px; margin-bottom: 10px; color: #9db2bd; } #fx-pricing-widget-copyright a{ text-decoration: unset; color: #bb3534; font-weight: 600; } </style> --}}
     <!-- Mobile Menu -->
     <section class="mobile-menu-area">
         <div class="container">
@@ -322,14 +219,10 @@
                         <nav id="dropdown">
                             <a href="home.html"><img src="{{asset('assets')}}/img/f-logo.png" alt=""></a>
                             <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item"><a href="latest-news">Latest News</a></li>
-                                <li class="list-inline-item"><a href="exclusive-news">Exclusive</a></li>
-                                <li class="list-inline-item mega-vd"><a href="">Region</a></li>
-                                <li class="list-inline-item"><a href="">E&P</a></li>
-                                <li class="list-inline-item"><a href="">Gas</a></li>
-                                <li class="list-inline-item"><a href="energy-transition">Energy Transition</a></li>
-                                <li class="list-inline-item"><a href="energy-finance">Energy Finance</a></li>
-                                <li class="list-inline-item"><a href="">Opinion</a></li>
+                                <li class="list-inline-item"><a href="{{route('pages.region')}}">Regions</a></li>
+                                @foreach ($categories as $category)
+                                <li class="list-inline-item"><a href="{{route('pages.categorynews', ['slug' => $category->slug])}}">{{$category->name}}</a></li>
+                                @endforeach
                                 <li><a>More</a>
                                     <ul class="mega-menu">
                                         <li class="row">
@@ -393,12 +286,11 @@
                                                     <div class="cat-content">
                                                         <ul class="list-unstyled">
                                                             <li><a href="">Edition</a></li>
-                                                            <li><a href="">Industry Events</a></li>
+                                                            <li><a href="{{route('event.index')}}">Industry Events</a></li>
                                                             <li><a href="">Newsletter</a></li>
                                                             <li><a href="">Breaking News Letter</a></li>
                                                             <li><a href="">RSS</a></li>
                                                             <li><a href="">Sponsor Content</a></li>
-                                                            <li><a href="">iEnergy News App</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -410,10 +302,10 @@
                                                     </div>
                                                     <div class="cat-content">
                                                         <ul class="list-unstyled">
-                                                            <li><a href="about">About Us</a></li>
-                                                            <li><a href="contact">Contact Us</a></li>
+                                                            <li><a href="{{route('about')}}">About Us</a></li>
+                                                            <li><a href="{{route('pages.contact')}}">Contact Us</a></li>
                                                             <li><a href="">Subscribe</a></li>
-                                                            <li><a href="frequent-ask-question">Faq</a></li>
+                                                            <li><a href="{{route('pages.faq')}}">Faq</a></li>
                                                             <li><a href="">Advertise</a></li>
                                                         </ul>
                                                     </div>
@@ -457,7 +349,7 @@
                         <h5>Services</h5>
                     </div>
                     <ul class="list-unstyled service-list">
-                        <li><a href=""><i class="fa fa-angle-right"></i>Advertisement</a></li>
+                        <li><a href="{{route('event.index')}}"><i class="fa fa-angle-right"></i>Advertise & Events</a></li>
                         <li><a href=""><i class="fa fa-angle-right"></i>Work for us</a></li>
                         <li><a href=""><i class="fa fa-angle-right"></i>Post a deal</a></li>
                     </ul>
@@ -478,13 +370,12 @@
             
             <div class="col-md-12">
                 <div class="f-menu d-flex justify-content-between">
-                    <a href="">About Us</a>
-                    <a href="">Archives</a>
-                    <a href="">Terms & Condition</a>
-                    <a href="">Privacy Policy</a>
+                    <a href="{{route('about')}}">About Us</a>
+                    <a href="{{route('pages.terms')}}">Terms & Condition</a>
+                    <a href="{{route('pages.privacy')}}">Privacy Policy</a>
                     <a href="{{$setting->reddit}}">Rss</a>
-                    <a href="">Faq</a>
-                    <a href="">Contact</a>
+                    <a href="{{route('pages.faq')}}">Faq</a>
+                    <a href="{{route('pages.contact')}}">Contact</a>
                 </div>
             </div>
         </div>
@@ -501,11 +392,10 @@
             <div class="col-md-6">
                 <div class="ftb-menu text-right">
                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"><a href="">Home</a></li>
+                        <li class="list-inline-item"><a href="{{route('homepage')}}">Home</a></li>
                         <li class="list-inline-item"><a href="">Map</a></li>
                         <li class="list-inline-item"><a href="">Site Map</a></li>
                         <li class="list-inline-item"><a href="">Location</a></li>
-                        <li class="list-inline-item"><a href="">Blog</a></li>
                     </ul>
                 </div>
             </div>

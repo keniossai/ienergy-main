@@ -37,30 +37,13 @@
                                 <img src="{{$post->image}}" alt="" class="img-fluid">
                                 <p>{!! $post->description !!}</p>
                             </div>
-                            {{-- <div class="news-comment">
-                                <i class="fa fa-quote-right"></i>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quam perspiciatis exdicta, quibusdam ut. Id unde recusandae esse dignissimos iure mollitia laborum aperiam? Sequi iusto delectus minus libero iusto
-                                    quas.</p>
-                                <span>ANDRU JAMES</span>
-                            </div> --}}
                             <div class="row">
                                 <div class="col-md-5 padding-fix-r">
                                     <div class="news-img-sm">
                                         <img src="" alt="" class="img-fluid">
                                     </div>
                                 </div>
-                                {{-- <div class="col-md-7">
-                                    <div class="news-sm-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tempora animi esse asperiores! Quibusdam facere eaque rem doloremque, iure velit nulla quo? Harum molestias officia magnam nam eius nisi
-                                            illum!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium perspiciatis asperiores ullam, tempora quae doloribus, voluptas iure laborum eveniet ipsa natus aspernatur.Sit tempora animi esse
-                                            asperiores! Quibusdam facere eaque rem.</p>
-                                    </div>
-                                </div> --}}
                             </div>
-                            {{-- <div class="news-btm-txt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet necessitatibus laudantium est delectus reprehenderit hic maxime, inventore repudiandae culpa quam? Ratione earum dolorum dolorem soluta aliquam
-                                    possimus commodi numquam voluptatibus.</p>
-                            </div> --}}
                         </div>
                         <div class="col-md-12">
                             <div class="social-tag d-flex justify-content-between">
@@ -85,25 +68,6 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="col-md-12">
-                            <div class="news-author d-flex">
-                                <div class="author-img">
-                                    <img src="{{asset('assets')}}/img/author.jpg" alt="">
-                                </div>
-                                <div class="author-content">
-                                    <h6>Author : <a href="">Md Tahmidur Rahman</a></h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi doloribus unde molestias laborum delectus adipisci, eos repellat in debitis cum impedit numquam, architecto, facilis.</p>
-                                    <ul class="list-unstyled list-inline f-social">
-                                        <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
-                                        <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
-                                        <li class="list-inline-item"><a href=""><i class="fa fa-linkedin"></i></a></li>
-                                        <li class="list-inline-item"><a href=""><i class="fa fa-google-plus"></i></a></li>
-                                        <li class="list-inline-item"><a href=""><i class="fa fa-rss"></i></a></li>
-                                        <li class="list-inline-item"><a href=""><i class="fa fa-youtube"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> --}}
                         <div class="col-md-12">
                             <div class="comment-sec">
                                 <div class="sec-title">
@@ -111,68 +75,10 @@
                                     <a href="{{route('pages.newsdetails', ['slug' => $post->slug])}}#disqus_thread">Comments</a>
                                 </div>
                                 <div id="disqus_thread"></div>
-                                {{-- <div class="comment-box d-flex">
-                                    <div class="comment-img">
-                                        <a href=""><img src="{{asset('assets')}}/img/comm-1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="comment-con">
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item"><a href="">John Doe</a></li>
-                                            <li class="list-inline-item"><a href="">Reply</a></li>
-                                        </ul>
-                                        <span>Feb 11, 2019 at 3:15pm</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam, non magnam molestias aspernatur. Magni suscipit sequi harum odit sunt est.</p>
-                                    </div>
-                                </div>
-                                <div class="comment-box comment-box2 d-flex">
-                                    <div class="comment-img">
-                                        <a href=""><img src="{{asset('assets')}}/img/comm-2.jpg" alt=""></a>
-                                    </div>
-                                    <div class="comment-con">
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item"><a href="">Mary Chang</a></li>
-                                            <li class="list-inline-item"><a href="">Reply</a></li>
-                                        </ul>
-                                        <span>Feb 11, 2019 at 3:15pm</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam, non magnam molestias aspernatur. Magni suscipit sequi harum odit sunt est.</p>
-                                    </div>
-                                </div>
-                                <div class="comment-box d-flex">
-                                    <div class="comment-img">
-                                        <a href=""><img src="{{asset('assets')}}/img/comm-3.jpg" alt=""></a>
-                                    </div>
-                                    <div class="comment-con">
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item"><a href="">Kate Brown</a></li>
-                                            <li class="list-inline-item"><a href="">Reply</a></li>
-                                        </ul>
-                                        <span>Feb 11, 2019 at 3:15pm</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam, non magnam molestias aspernatur. Magni suscipit sequi harum odit sunt est.</p>
-                                    </div>
-                                </div> --}}
+                               
                             </div>
                         </div>
-                        {{-- <div class="col-md-12">
-                            <div class="comment-form">
-                                <div class="sec-title">
-                                    <h5>Leave Your Comment</h5>
-                                </div>
-                                <form class="com-form" action="#">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <input type="text" name="name" value="" placeholder="Enter Your Name">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" name="email" value="" placeholder="Enter Your Email">
-                                        </div>
-                                        <div class="col-md-12">
-                                            <textarea name="name" placeholder="Your Comment Here"></textarea>
-                                            <button type="button" name="button">Post Comment</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div> --}}
+                        
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
@@ -280,12 +186,12 @@
     <script>
         (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
-        s.src = 'https://ienergy-news.disqus.com/embed.js';
+        s.src = 'https://ienergy-africa-com.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <script id="dsq-count-scr" src="//ienergy-news.disqus.com/count.js" async></script>
+    <script id="dsq-count-scr" src="//ienergy-africa-com.disqus.com/count.js" async></script>
 @endsection
 

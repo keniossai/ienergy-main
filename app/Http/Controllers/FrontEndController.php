@@ -14,20 +14,21 @@ class FrontEndController extends Controller
     public function homepage(){
         $posts = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(6)->get();
         $firstPosts = $posts->splice(0, 1);
-        $lastPosts = $posts->splice(0, 2);
+        $lastPosts = $posts->splice(0, 1);
         $trendingPosts = $posts->splice(0, 3);
 
-        $moreNews = Post::with('category', 'user')->orderBy('created_at', 'DESC')->take(20)->get();
-        $moreView = $moreNews->splice(4, 20);
+        $moreNews = Post::with('category', 'user')->orderBy('created_at', 'DESC')->take(600)->get();
+        $moreView = $moreNews->splice(4, 8);
+
+        $pagePost = $moreNews->splice(20);
 
         $popularNews = Post::with('category', 'user')->orderBy('created_at', 'DESC')->take(30)->get();
         $popularPosts = $popularNews->splice(20, 6);
-        $secondPosts = $popularNews->splice(20, 6);
 
         $tags = Tag::all();
 
         $recentPosts = Post::with('category', 'user')->orderBy('created_at', 'DESC')->paginate(1000);
-        return view('pages.homepage', compact(['posts', 'tags', 'recentPosts', 'firstPosts', 'lastPosts', 'moreView', 'trendingPosts', 'popularPosts', 'secondPosts']));
+        return view('pages.homepage', compact(['posts', 'tags', 'recentPosts', 'firstPosts', 'lastPosts', 'moreView', 'trendingPosts', 'popularPosts', 'pagePost']));
     }
 
 
@@ -36,7 +37,7 @@ class FrontEndController extends Controller
         return view('pages.about');
     }
 
-    public function newsdetails($slug){
+    public function show($slug){
         $post = Post::with('category', 'user')->where('slug', $slug)->first();
         $posts = Post::with('category', 'user')->inRandomOrder()->limit(5)->get();
         $relatedPost = Post::with('category', 'user')->orderBy('created_at', 'DESC')->limit(16)->get();
@@ -55,7 +56,7 @@ class FrontEndController extends Controller
     public function category($slug){
         $category = Category::where('slug', $slug)->first();
         if($category){
-            $posts = Post::where('category_id', $category->id)->paginate(9);
+            $posts = Post::where('category_id', $category->id)->paginate(1000);
         }else{
             return redirect()->route('homepage');
         }
@@ -79,6 +80,18 @@ class FrontEndController extends Controller
 
 
 
+    public function privacy(){
+
+        return view('pages.privacy');
+    }
+    public function faq(){
+
+        return view('pages.faq');
+    }
+    public function terms(){
+
+        return view('pages.terms');
+    }
     public function region(){
 
         return view('pages.region');

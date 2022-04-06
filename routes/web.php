@@ -28,14 +28,14 @@ use App\Http\Controllers\EventsController;
 Auth::routes();
 
 Route::get('/', [FrontEndController::class, 'homepage'])->name('homepage');
-Route::get('newsdetails/{slug}', [FrontEndController::class, 'newsdetails'])->name('pages.newsdetails');
+Route::get('/news/{slug}', [FrontEndController::class, 'show'])->name('pages.newsdetails');
 Route::get('/category/{slug}', [FrontEndController::class, 'category'])->name('pages.categorynews');
 Route::get('/tag/{slug}', [FrontEndController::class, 'tag'])->name('pages.tagnew');
 
 
 
 
-Route::get('sector/regional', [FrontEndController::class, 'region'])->name('pages.region');
+Route::get('/regional', [FrontEndController::class, 'region'])->name('pages.region');
 
 // Region Location Routes
 Route::get('/nigeria', [FrontEndController::class, 'nigeria'])->name('nigeria');
@@ -50,17 +50,19 @@ Route::get('/nigeria', [FrontEndController::class, 'nigeria'])->name('nigeria');
 // Route::get('/exclusive-news', [FrontEndController::class, 'exclusive'])->name('exclusive');
 // Route::get('/africa-news', [FrontEndController::class, 'africa'])->name('africa');
 // Route::get('/energy-transition', [FrontEndController::class, 'development'])->name('development');
-// Route::get('/frequent-ask-question', [FrontEndController::class, 'faq'])->name('faq');
+
 // Route::get('/energy-finance', [FrontEndController::class, 'energyfinance'])->name('energyfinance');
 
 
 Route::get('/conferences', [EventsController::class, 'index'])->name('event.index');
 Route::get('/eventdetail/{slug}', [EventsController::class, 'eventdetail'])->name('events.eventdetails');
 
-
-Route::get('/site/about-us', [FrontEndController::class, 'about'])->name('about');
+Route::get('/frequent-ask-question', [FrontEndController::class, 'faq'])->name('pages.faq');
+Route::get('/privacy-policy', [FrontEndController::class, 'privacy'])->name('pages.privacy');
+Route::get('/terms-and-condition', [FrontEndController::class, 'terms'])->name('pages.terms');
+Route::get('/about-us', [FrontEndController::class, 'about'])->name('about');
 Route::get('/contact-us', [FrontEndController::class, 'contact'])->name('contact');
-Route::post('/site/contact-us', [FrontEndController::class, 'send_message'])->name('pages.contact');
+Route::post('/contact-us', [FrontEndController::class, 'send_message'])->name('pages.contact');
 Route::get('/search', [FrontEndController::class, 'search'])->name('search');
 
 

@@ -4,55 +4,58 @@
     h3:hover{
         text-decoration: underline;
     }
+
+    .category{
+        font-size: 12px;
+        color: #fff;
+        background: #00BFE8;
+        padding: 4px 12px 3px;
+        font-weight: 400;
+        text-transform: uppercase;
+        /* -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px; */
+        border-radius: 2px;
+        margin-right: 20px;
+    }
 </style>
 
+
+
 @section('content')
-<section class="more-news-area">
+<section class="news-area2 mt-5 mb-4">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 mt-5">
-                <div class="more-news">
-                    <div class="sec-title">
+            
+            <div class=" col-md-12">
+                <div class="pop-news">
+                    <div class="sec-title mt-5">
                         <h5>{{$category->name}}</h5>
                     </div>
-                    <div class="more-slider owl-carousel">
-                        <div class="more-item">
+                    <div class="popular-item">
+                        <div class="row">
                             @foreach ($posts as $post)
-                                <div class="more-content d-flex">
-                                    <div class="more-img">
-                                        <a href="{{route('pages.newsdetails', ['slug' => $post->slug])}}"><img style="width: 200px;" src="{{$post->image}}" alt=""></a>
+                            <div class="col-md-3 mt-3 paginate">
+                                <div class="pop-box">
+                                    <div class="pop-img">
+                                        <a href="{{route('pages.newsdetails', ['slug' => $post->slug])}}"><img src="{{$post->image}}" alt="" style='width: 100%;' class="img-fluid"></a>
                                     </div>
                                     <div class="img-content">
-                                        <h3><a href="{{route('pages.newsdetails', ['slug' => $post->slug])}}">{{$post->title}}</a></h3>
+                                        <h4 class='mb-2'><a href="{{route('pages.newsdetails', ['slug' => $post->slug])}}">{{$post->title}}</a></h4>
                                         <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item mt-2">{{$post->category->name}}</li>
+                                            <li class="list-inline-item category">{{$post->category->name}}</li>
                                             <li class="list-inline-item">{{$post->created_at->format('M d, Y')}}</li>
                                         </ul>
-                                        <p>{{ Str::limit($post->description, 140)}}</p>
                                     </div>
-                                </div>
-                            @endforeach
-                           
-                        </div>
-                        {{-- <div class="more-item">
-                            @foreach ($rightSidePost as $post)
-                            <div class="more-content d-flex">
-                                <div class="more-img">
-                                    <a href="#"><img style="width: 200px;" src="{{$post->image}}" alt=""></a>
-                                </div>
-                                <div class="img-content">
-                                    <h3><a href="">{{$post->title}}</a></h3>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">{{$post->category->name}}</li>
-                                        <li class="list-inline-item">{{$post->created_at->format('M d, Y')}}</li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, quam voluptatibus ipsum. Exde tenetur, quasi, provident animi magni voluptas fugit Itaque labore quae ad........</p>
                                 </div>
                             </div>
                             @endforeach
-                            
-                            
-                        </div> --}}
+                            <div class="col-md-12 text-center">
+                                <div class="schedule-listing-btn text-center">
+                                    <button class="btn load">Load More</button>
+                                 </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,4 +63,20 @@
         </div>
     </div>
 </section>
+
+<style>
+    .btn{
+        display: block;
+        background: #00BFE8;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        width: 150px;
+        line-height: 20px;
+        margin: 50px auto;
+        border-radius: 50px;
+    }
+
+</style>
 @endsection
+
